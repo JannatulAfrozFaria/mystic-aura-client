@@ -1,5 +1,6 @@
 // import React from "react";
 import { MdLocationOn } from "react-icons/md";
+import { IoCallSharp } from "react-icons/io5";
 
 const Footer = () => {
     return (
@@ -14,7 +15,7 @@ const Footer = () => {
                             <h1 className="uppercase protest font-extrabold text-3xl">Mystic Aura</h1>
                             <div className="flex">
                                 <div>
-                                    <img src="" alt="" />
+                                <MdLocationOn />
                                 </div>
                                 <div>
                                     <h1 className="font-semibold">Address:</h1>
@@ -34,7 +35,7 @@ const Footer = () => {
                     </div> */}
                     <div className="flex">
                         <div>
-                            <MdLocationOn />
+                            <IoCallSharp />
                         </div>
                         <div>
                             <h1 className="font-semibold">Call us now:</h1>
