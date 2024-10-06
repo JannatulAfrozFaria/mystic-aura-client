@@ -6,7 +6,7 @@ const Banner = () => {
         <div>
             <Carousel>
                 <div>
-                    <img src="assets/1.jpeg" />
+                    <img src="https://i.ibb.co/YhznL0P/banner-6.jpg" />
                     <p className="legend">Legend 1</p>
                 </div>
                 <div>
