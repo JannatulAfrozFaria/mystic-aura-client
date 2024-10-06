@@ -14,7 +14,7 @@ const Banner = () => {
                     <p className="legend">Legend 2</p>
                 </div>
                 <div>
-                    <img src="assets/3.jpeg" />
+                    <img src="https://i.postimg.cc/zvFmswfV/banner-3.avif" />
                     <p className="legend">Legend 3</p>
                 </div>
             </Carousel>
