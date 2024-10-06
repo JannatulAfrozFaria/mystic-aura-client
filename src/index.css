@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Your custom styles can go below */
+.protest {
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.roboto {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
+/* FOOTER------ */
+.btn-basic{
+    background-color:#FBCFE8 ;
+    color:black;
+    outline-color: #FBCFE8;
+}
+  

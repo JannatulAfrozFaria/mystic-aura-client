@@ -12,7 +12,7 @@ export default [
       ecmaVersion: 2020,
       globals: {
         ...globals.browser,
-        ...globals.node, // Add node globals to allow require
+        ...globals.node,
       },
       // globals:globals.browser,
       parserOptions: {
