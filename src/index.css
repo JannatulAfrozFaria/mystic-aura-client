@@ -25,6 +25,10 @@
     color:black;
     outline-color: #FBCFE8;
 }
+.box{
+  border: 2px solid #FBCFE8;
+  padding: 1%;
+}
 .text-basic{
  color: #FBCFE8
 }
