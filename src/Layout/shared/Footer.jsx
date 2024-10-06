@@ -15,7 +15,7 @@ const Footer = () => {
                         <div>
                             <h1 className="uppercase protest font-extrabold text-3xl">Mystic Aura</h1>
                             <div className="flex">
-                                <div>
+                                <div className="box">
                                     <MdLocationOn />
                                 </div>
                                 <div>
@@ -35,7 +35,7 @@ const Footer = () => {
                         </div>
                     </div> */}
                     <div className="flex">
-                        <div>
+                        <div className="box">
                             <IoCallSharp />
                         </div>
                         <div>
@@ -44,7 +44,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="flex">
-                        <div>
+                        <div className="box">
                             <IoIosMail />
                         </div>
                         <div>
