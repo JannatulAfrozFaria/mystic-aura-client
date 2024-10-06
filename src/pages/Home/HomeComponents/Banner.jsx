@@ -10,7 +10,7 @@ const Banner = () => {
                     <p className="legend">Legend 1</p>
                 </div>
                 <div>
-                    <img src="assets/2.jpeg" />
+                    <img src="https://i.postimg.cc/0jf3W8tS/banner-2.avif" />
                     <p className="legend">Legend 2</p>
                 </div>
                 <div>
@@ -24,6 +24,10 @@ const Banner = () => {
                 <div>
                     <img src="https://i.postimg.cc/T2VX5xcf/banner-5.avif" />
                     <p className="legend">Legend 5</p>
+                </div>
+                <div>
+                    <img src="https://i.postimg.cc/76Sjz10m/banner-b-8.avif" />
+                    <p className="legend">Legend 6</p>
                 </div>
             </Carousel>
         </div>
