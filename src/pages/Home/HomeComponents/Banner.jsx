@@ -18,12 +18,12 @@ const Banner = () => {
                     <p className="legend">Legend 3</p>
                 </div>
                 <div>
-                    <img src="assets/2.jpeg" />
-                    <p className="legend">Legend 2</p>
+                    <img src="https://i.postimg.cc/kg4rHbPg/banner-4.avif" />
+                    <p className="legend">Legend 4</p>
                 </div>
                 <div>
                     <img src="https://i.postimg.cc/T2VX5xcf/banner-5.avif" />
-                    <p className="legend">Legend 3</p>
+                    <p className="legend">Legend 5</p>
                 </div>
             </Carousel>
         </div>
