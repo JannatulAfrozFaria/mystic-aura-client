@@ -22,7 +22,7 @@ const Discount = () => {
                     </div>
                     {/* COUNT----DOWN */}
                     <div>
-                        <CountDown seconds={550000000} ></CountDown>
+                        <CountDown seconds={600000} ></CountDown>
                     </div>
                     <div>
                         <button className="text-dark roboto uppercase border border-t-0 border-x-0 border-b-black border-b-2">

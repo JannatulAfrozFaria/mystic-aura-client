@@ -11,7 +11,11 @@ const formatTime = (time) =>{
     if (minutes < 10) minutes = '0' + minutes;
     if (seconds < 10) seconds = '0' + seconds;
 
-    return `${days}:${hours}:${minutes}:${seconds}`;
+    return `
+    ${days} days :  
+    ${hours} hours : 
+    ${minutes} minutes  :  
+    ${seconds} seconds`;
 }
 const CountDown =({seconds}) => {
     const [countdown,setCountdown] = useState(seconds)
