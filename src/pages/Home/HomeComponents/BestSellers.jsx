@@ -15,6 +15,7 @@ const BestSellers = () => {
                         <p><span>Brand:</span> {perfume.brandName} </p>
                         <p><span>Origin:</span> {perfume.origin} </p>
                         <p><span>Made for:</span> {perfume.userGroup} </p>
+                        <div className='flex gap-1'><p>Price:</p> $ <span>{perfume.price}</span>  </div>
                     </div>
                 </div>
                 )}
