@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const formatTime = (time) =>{
     let minutes = Math.floor(time/60)
+    let seconds = Math.floor(time - minutes*60)
 }
 const CountDown =({seconds}) => {
     const [countdown,setCountdown] = useState(seconds)
