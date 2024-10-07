@@ -11,12 +11,12 @@ const Brands = () => {
         {
           id: 2,
           name: "Gucci",
-          image: "https://i.postimg.cc/NMPySVxm/gucci.jpg",
+          image: "https://i.ibb.co/C20ThYx/brand-3.jpg",
         },
         {
           id: 3,
           name: "Dior",
-          image: "https://i.postimg.cc/W4FQ9vLJ/dior.jpg",
+          image: "https://i.ibb.co/z74kB07/brand2.jpg",
         },
         {
           id: 4,
