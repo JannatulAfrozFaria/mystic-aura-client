@@ -49,6 +49,7 @@
   color: #FBCFE8;
   font-weight: 500;
   font-family: "Protest Strike", sans-serif;
+  border-radius: 0% 3% 0% 3%;
 }
 .priceTag span{
   color: #f781c4;
