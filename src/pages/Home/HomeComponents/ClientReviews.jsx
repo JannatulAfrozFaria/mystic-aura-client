@@ -165,8 +165,7 @@ const ClientReviews = () => {
                                                 <div className="chat chat-start">
                                                     <div className="chat-image avatar">
                                                         <div className=" w-16 rounded-full">
-                                                            <Image width={70} height={70}
-                                                                alt="Tailwind CSS chat bubble component"
+                                                                <img alt="Tailwind CSS chat bubble component"
                                                                 src={customer.customerImage} />
                                                         </div>
                                                     </div>
