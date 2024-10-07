@@ -7,8 +7,12 @@ const BestSellers = () => {
             <div className="grid">
                 {perfumes.map((perfume)=>
                 <div key={perfume.id} className='grid grid-cols-5 gap-4'>
-                    <div className='col-span-2'></div>
-                    <div className='col-span-3'></div>
+                    <div className='col-span-2'>
+                        <img src={perfume.image} alt="perfume_image" />
+                    </div>
+                    <div className='col-span-3'>
+                        <h1> {perfume.name} </h1>
+                    </div>
                 </div>
                 )}
             </div>
