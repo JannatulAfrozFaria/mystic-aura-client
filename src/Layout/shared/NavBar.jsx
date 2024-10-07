@@ -17,7 +17,7 @@ const NavBar = () => {
             <div className="navbar fixed z-10 bg-black bg-opacity-30 ">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-basic">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-5 w-5"
@@ -37,7 +37,7 @@ const NavBar = () => {
                             {navItems}
                         </ul>
                     </div>
-                    <img className="w-16" src="https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png" alt="" />
+                    <img className="w-12 md:w-16" src="https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png" alt="" />
                     <a className="btn btn-ghost brandName text-xl md:text-4xl">Mystic <span className="brandSpan">Aura</span> </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
