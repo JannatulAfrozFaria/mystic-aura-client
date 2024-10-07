@@ -8,8 +8,9 @@ const Discount = () => {
                     <img src="" alt="" />
                 </div>
                 <div className="bg-[#FBCFE8] p-8 grid grid-cols-1">
-                        <div className="">
+                        <div className="bg-white rounded-full w-20">
                             <p className="uppercase" >Discount</p>
+
                         </div>
                 </div>
             </div>
