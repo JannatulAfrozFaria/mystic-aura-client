@@ -36,12 +36,12 @@ const Brands = () => {
         {
           id: 7,
           name: "Yves Saint Laurent",
-          image: "https://i.postimg.cc/vHx0ffhp/ysl.jpg",
+          image: "https://i.ibb.co/7YVWcH6/brand-8.webp",
         },
         {
           id: 8,
           name: "Burberry",
-          image: "https://i.postimg.cc/vH7y5Ztq/burberry.jpg",
+          image: "https://i.ibb.co/4T6NGRq/brand7.png",
         },
         {
           id: 9,
