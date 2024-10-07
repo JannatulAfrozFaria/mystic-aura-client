@@ -1,5 +1,6 @@
 import Banner from "./HomeComponents/Banner";
 import BestSellers from "./HomeComponents/BestSellers";
+import Brands from "./HomeComponents/Brands";
 import ClientReviews from "./HomeComponents/ClientReviews";
 import Discount from "./HomeComponents/Discount";
 import FeaturedPerfumes from "./HomeComponents/FeaturedPerfumes";
@@ -14,6 +15,7 @@ const Home = () => {
                 <BestSellers></BestSellers>
                 <Discount></Discount>
                 <ClientReviews></ClientReviews>
+                <Brands></Brands>
             </div>
            
         </div>
