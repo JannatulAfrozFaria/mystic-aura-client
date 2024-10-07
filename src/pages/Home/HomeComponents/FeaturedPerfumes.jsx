@@ -24,7 +24,8 @@ const FeaturedPerfumes = () => {
                 >
                     {perfumes.slice(16). map((perfume)=>
                     <SwiperSlide key={perfume.id}>
-                        <img className=" w-full h-[40vh] shadow-2xl" src={perfume.image} alt="perfume-photo" />
+                        <img className="relative w-full h-[40vh] shadow-2xl" src={perfume.image} alt="perfume-photo" />
+                        <p className="text-basic">$ <span>{perfume.price}</span> </p>
                     </SwiperSlide>
                     )}
                 </Swiper>

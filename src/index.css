@@ -43,6 +43,16 @@
   background-color: #FBCFE8;
   color: black;
 }
+/* FEATURED */
+.priceTag{
+  background-color: black;
+  color: #FBCFE8;
+  font-weight: 500;
+  font-family: "Protest Strike", sans-serif;
+}
+.priceTag span{
+  color: #f781c4;
+}
 /* FOOTER------ */
 .btn-basic{
     background-color:#FBCFE8 ;
