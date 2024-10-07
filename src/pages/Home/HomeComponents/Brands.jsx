@@ -92,7 +92,7 @@ const Brands = () => {
                                 <img className="rounded-lg shadow-lg" src={item.image} alt="icon-company" />
                             </div>
                             <div className=''>
-                                <h1 className="text-theme text-4xl">{item.name} </h1>
+                                <h1 className="text-dark text-2xl">{item.name} </h1>
                             </div>
                         </div>
                     ))
