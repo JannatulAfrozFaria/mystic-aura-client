@@ -11,12 +11,13 @@ const formatTime = (time) =>{
     if (minutes < 10) minutes = '0' + minutes;
     if (seconds < 10) seconds = '0' + seconds;
 
-    return `
-    ${days} days :  
-    ${hours} hours : 
-    ${minutes} minutes  :  
-    ${seconds} seconds`;
-}
+    // return `
+    // ${days} days :  
+    // ${hours} hours : 
+    // ${minutes} minutes  :  
+    // ${seconds} seconds`;
+    return { days, hours, minutes, seconds };
+};
 const CountDown =({seconds}) => {
     const [countdown,setCountdown] = useState(seconds)
     const timerId = useRef()
@@ -33,9 +34,21 @@ const CountDown =({seconds}) => {
         }
 
     },[countdown])
+    const { days, hours, minutes, seconds: secs } = formatTime(countdown);
     return (
         <div>
-             <h1 className="text-3xl roboto text-dark"> {formatTime(countdown)} </h1>
+             {/* <h1 className="text-3xl roboto text-dark"> {formatTime(countdown)} </h1> */}
+             <h1 className="text-2xl roboto text-dark"> 
+                <span className="text-3xl protest"> {days} </span>
+                Days
+                <span className="text-3xl protest"> {hours} </span>
+                Days
+                <span className="text-3xl protest"> {minutes} </span>
+                Days
+                <span className="text-3xl protest"> {seconds} </span>
+                Days
+                 </h1>
+
         </div>
     );
 };
