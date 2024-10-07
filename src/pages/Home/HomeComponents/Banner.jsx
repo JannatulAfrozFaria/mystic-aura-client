@@ -48,15 +48,15 @@ const Banner = () => {
             <Carousel swipeable={true} interval={4000} autoPlay={true} infiniteLoop={true} transitionTime={3000}>
                 {
                     Banners.map((banner) => {
-                        const [firstWord, ...restWords] = banner.title.split(' '); // Split the title into first word and rest of the words
+                        const [firstWord, ...restWords] = banner.title.split(' ');
                         return (
                             <div  key={banner.id} className="h-[27vh] md:h-[90vh]">
                                 <img className="relative" src={banner.image} alt={banner.title} />
                                 <h1 className="absolute top-12 p-12 md:p-24 uppercase text-2xl md:text-7xl text-basic">
-                                    {firstWord}{' '} {/* First word of the title */}
+                                    {firstWord}{' '} 
                                     <span className='brandSpan'>
                                         <Typewriter
-                                            words={[restWords.join(' ')]} // Rest of the words joined as a string
+                                            words={[restWords.join(' ')]} 
                                             loop={true}
                                             cursor
                                             cursorStyle='_'
