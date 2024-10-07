@@ -12,7 +12,9 @@ const BestSellers = () => {
                     </div>
                     <div className='col-span-3'>
                         <h1> {perfume.name} </h1>
+                        <p><span>Brand:</span> {perfume.brandName} </p>
                         <p><span>Origin:</span> {perfume.origin} </p>
+                        <p><span>Made for:</span> {perfume.userGroup} </p>
                     </div>
                 </div>
                 )}
