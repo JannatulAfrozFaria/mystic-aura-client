@@ -82,6 +82,10 @@
   font-family: "Protest Strike", sans-serif;
   color: #c97ca9;
 }
+/* CUSTOMER------REVIEW */
+.slick-slide > div{
+  margin: 0 10px;
+}
 /* FOOTER------ */
 .btn-basic{
     background-color:#FBCFE8 ;
