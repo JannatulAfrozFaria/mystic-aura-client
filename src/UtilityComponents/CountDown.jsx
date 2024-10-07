@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
+const formatTime = (time) =>{
+    let minutes = Math.floor(time/60)
+}
 const CountDown =({seconds}) => {
     const [countdown,setCountdown] = useState(seconds)
     const timerId = useRef()
