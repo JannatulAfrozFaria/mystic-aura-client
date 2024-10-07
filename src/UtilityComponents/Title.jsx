@@ -4,7 +4,7 @@ const Title = ({heading, description,image}) => {
     return (
         <div>
             <h1 className="text-3xl brandSpan">{heading} </h1>
-            <div>
+            <div className="mb-3">
                 <hr />
                 <img src={image} alt="" />
                 <hr />
