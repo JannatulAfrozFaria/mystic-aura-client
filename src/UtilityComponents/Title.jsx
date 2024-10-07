@@ -3,7 +3,7 @@
 const Title = ({ heading, description, image,imageClass }) => {
     return (
         <div className="my-6 text-center">
-            <h1 className="text-3xl brandSpan uppercase roboto">{heading} </h1>
+            <h1 className="text-3xl titleText uppercase roboto">{heading} </h1>
             <div className="mb-3 flex mt-2 justify-center items-center">
                 <div>
                     <hr  className="border-2 border-[#d282afbc] w-40" />
