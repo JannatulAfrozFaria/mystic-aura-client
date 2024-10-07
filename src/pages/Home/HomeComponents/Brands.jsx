@@ -86,10 +86,11 @@ const Brands = () => {
             <div className="w-5/6 mx-auto md:w-full">
             <Marquee pauseOnClick={true} pauseOnHover={true} className='bg-gray-200 p-10 border border-y-4 border-orange-600'>
                 {
-                    row2.map(item => (
+                    perfumeBrands.map(item => (
                         <div key={item.id} className='flex gap-4 px-10 items-end'>
                             <div>
-                                <Image width={70} height={70} src={item.image} alt='icon-company'></Image>
+                                {/* <Image width={70} height={70} src={item.image} alt='icon-company'></Image> */}
+                                <img src="" alt="icon-company" />
                             </div>
                             <div className=''>
                                 <h1 className="text-theme text-4xl">{item.firmName} </h1>
