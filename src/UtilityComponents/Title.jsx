@@ -1,9 +1,9 @@
 
 
-const Title = () => {
+const Title = ({heading, description,image}) => {
     return (
         <div>
-            
+            <h1>{heading} </h1>
         </div>
     );
 };
