@@ -9,9 +9,9 @@ const Banner = () => {
                 <div className="h-[90vh]">
                     {/* <img src="https://i.ibb.co/YhznL0P/banner-6.jpg" /> */}
                     <img className="relative" src="https://i.postimg.cc/SsbvmX38/banner-b-1.jpg" />
-                    <h1 className="absolute p-12">
+                    <h1 className="absolute p-12 text-2xl md:text-7xl  text-basic">
                         Trussardi{' '}
-                        <span className='text-2xl md:text-7xl banner-title'
+                        <span className='brandSpan'
                         // style={{ color: 'red', fontWeight: 'bold' }}
                         >
                             <Typewriter
@@ -28,7 +28,7 @@ const Banner = () => {
                             />
                         </span>
                     </h1>
-                    <p className="legend bannerText">Trussardi Donna</p>
+                    {/* <p className="legend bannerText">Trussardi Donna</p> */}
                 </div>
                 <div className="h-[90vh]">
                     <img src="https://i.postimg.cc/0jf3W8tS/banner-2.avif" />
