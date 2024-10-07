@@ -3,18 +3,18 @@
 const NavBar = () => {
     const navItems = <>
     <li className="menu-item">
-        <a href="/" className="nav-item">Home</a>
+        <a href="/" className="">Home</a>
     </li>
     <li className="menu-item">
-        <a href="/" className="nav-item">Shop</a>
+        <a href="/" className="">Shop</a>
     </li>
     <li className="menu-item">
-        <a href="/" className="nav-item">Blog</a>
+        <a href="/" className="">Blog</a>
     </li>
     </>
     return (
         <div>
-            <div className="navbar fixed z-10 bg-transparent">
+            <div className="navbar fixed z-10 bg-transparent nav-item">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
