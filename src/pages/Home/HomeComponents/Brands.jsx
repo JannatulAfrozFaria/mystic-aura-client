@@ -21,7 +21,7 @@ const Brands = () => {
         {
           id: 4,
           name: "Versace",
-          image: "https://i.postimg.cc/9f1TFybW/versace.jpg",
+          image: "https://i.ibb.co/vQ3gf1L/brand5.jpg",
         },
         {
           id: 5,
@@ -31,7 +31,7 @@ const Brands = () => {
         {
           id: 6,
           name: "Armani",
-          image: "https://i.postimg.cc/Bnt6mvs9/armani.jpg",
+          image: "https://i.ibb.co/t8X4k3n/brand6.webp",
         },
         {
           id: 7,
