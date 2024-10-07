@@ -7,8 +7,11 @@ const CountDown =({seconds}) => {
         timerId.current = setInterval(()=>{
             setCountdown(prev=>prev-1)
         },1000)
-        return () => clearInterval(timerId)
-},[])
+        return () => clearInterval(timerId.current)
+    },[])
+    useEffect(()=>{
+
+    },[countdown])
     return (
         <div>
              <h1 className="text-3xl roboto text-dark"> {countdown} </h1>
