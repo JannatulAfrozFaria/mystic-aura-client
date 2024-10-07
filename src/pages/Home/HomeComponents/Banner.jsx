@@ -45,10 +45,10 @@ const Banner = () => {
                             {/* <img src="https://i.ibb.co/YhznL0P/banner-6.jpg" /> */}
                             <img className="relative" src="https://i.postimg.cc/SsbvmX38/banner-b-1.jpg" />
                             <h1 className="absolute top-12 p-12 md:p-24 uppercase text-2xl md:text-7xl  text-basic">
-                                Trussardi{' '}
+                                {banner.title[0]}{' '}
                                 <span className='brandSpan'>
                                     <Typewriter
-                                        words={['Donna']}
+                                        words={[`${banner.title[1]}`]}
                                         loop={true}
                                         cursor
                                         cursorStyle='_'
