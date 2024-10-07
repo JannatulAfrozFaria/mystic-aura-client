@@ -38,7 +38,7 @@ const NavBar = () => {
                         </ul>
                     </div>
                     <img className="w-16" src="https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png" alt="" />
-                    <a className="btn btn-ghost text-xl protest navItem">Mystic <span className="brandSpan">Aura</span> </a>
+                    <a className="btn btn-ghost brandName text-xl md:text-4xl">Mystic <span className="brandSpan">Aura</span> </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 roboto font-semibold navItem">

@@ -20,6 +20,11 @@
   font-style: normal;
 }
 /* NAVBAR */
+.brandName{
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  color: #FBCFE8;
+}
 .brandSpan{
   color: #f997cebc;
 }
