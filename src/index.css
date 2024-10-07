@@ -98,6 +98,9 @@
 .text-basic{
  color: #FBCFE8
 }
+.text-dark{
+ color:  #c97ca9;
+}
 /* UTILITY------- */
 .titleText{
   color: #c97ca9;
