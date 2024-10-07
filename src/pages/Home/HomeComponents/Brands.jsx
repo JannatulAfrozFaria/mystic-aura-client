@@ -1,5 +1,5 @@
 import Title from "../../../UtilityComponents/Title";
-
+import Marquee from "react-fast-marquee";
 
 const Brands = () => {
     const perfumeBrands = [
@@ -83,7 +83,23 @@ const Brands = () => {
     return (
         <div className="my-12 md:my-24">
             <Title heading={'Brands'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'} ></Title>
-            <div className="w-5/6 mx-auto md:w-full"></div>
+            <div className="w-5/6 mx-auto md:w-full">
+            <Marquee pauseOnClick={true} pauseOnHover={true} className='bg-gray-200 p-10 border border-y-4 border-orange-600'>
+                {
+                    row2.map(item => (
+                        <div key={item.id} className='flex gap-4 px-10 items-end'>
+                            <div>
+                                <Image width={70} height={70} src={item.image} alt='icon-company'></Image>
+                            </div>
+                            <div className=''>
+                                <h1 className="text-theme text-4xl">{item.firmName} </h1>
+                                <p className='text-gray text-xl'>{item.firmType} </p>
+                            </div>
+                        </div>
+                    ))
+                }
+            </Marquee>
+            </div>
         </div>
     );
 };
