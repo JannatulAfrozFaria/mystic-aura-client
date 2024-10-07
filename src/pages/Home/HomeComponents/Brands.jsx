@@ -46,12 +46,12 @@ const Brands = () => {
         {
           id: 9,
           name: "Prada",
-          image: "https://i.postimg.cc/MGSbCTbK/prada.jpg",
+          image: "https://i.ibb.co/9NYWNFx/brand10.jpg",
         },
         {
           id: 10,
           name: "Givenchy",
-          image: "https://i.postimg.cc/QCsMd1Tx/givenchy.jpg",
+          image: "https://i.ibb.co/KsNW6Rg/brand-9.png",
         },
         {
           id: 11,
