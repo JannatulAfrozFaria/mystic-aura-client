@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 import CountDown from "../../../UtilityComponents/CountDown";
 
 
-const Discount = ({seconds}) => {
-    const [countdown,setCountdown] = useState(seconds)
-    const timerId = useRef()
-    useEffect(()=>{
-        timerId.current = setInterval(()=>{
-            setCountdown(prev=>prev-1)
-        },1000)
-        return () => clearInterval(timerId)
-},[])
+const Discount = () => {
+// const Discount = ({seconds}) => {
+//     const [countdown,setCountdown] = useState(seconds)
+//     const timerId = useRef()
+//     useEffect(()=>{
+//         timerId.current = setInterval(()=>{
+//             setCountdown(prev=>prev-1)
+//         },1000)
+//         return () => clearInterval(timerId)
+// },[])
     return (
         <div className="mb-12 md:mb-24">
             <div className="flex flex-col-reverse md:flex-row">
@@ -26,7 +27,7 @@ const Discount = ({seconds}) => {
                         </div>
                         {/* COUNT----DOWN */}
                         <div>
-                            <CountDown></CountDown>
+                            <CountDown seconds={15000000} ></CountDown>
                         </div>
                         <div>
                             <button className="text-dark roboto uppercase border-2 border-b-black">
