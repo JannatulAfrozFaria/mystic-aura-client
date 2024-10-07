@@ -56,12 +56,12 @@ const Brands = () => {
         {
           id: 11,
           name: "Bvlgari",
-          image: "https://i.postimg.cc/wT2hNjNV/bvlgari.jpg",
+          image: "https://i.ibb.co/DLcfnfZ/brand11.jpg",
         },
         {
           id: 12,
           name: "Dolce & Gabbana",
-          image: "https://i.postimg.cc/L8XsmLhx/dolce-gabbana.jpg",
+          image: "https://i.ibb.co/K5jMZVf/brand12.jpg",
         },
         {
           id: 13,
