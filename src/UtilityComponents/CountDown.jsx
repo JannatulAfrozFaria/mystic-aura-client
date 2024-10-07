@@ -42,11 +42,11 @@ const CountDown =({seconds}) => {
                 <span className="text-3xl protest"> {days} </span>
                 Days
                 <span className="text-3xl protest"> {hours} </span>
-                Days
+                Hours
                 <span className="text-3xl protest"> {minutes} </span>
-                Days
-                <span className="text-3xl protest"> {seconds} </span>
-                Days
+                Minutes
+                <span className="text-3xl protest"> {secs} </span>
+                Seconds
                  </h1>
 
         </div>
