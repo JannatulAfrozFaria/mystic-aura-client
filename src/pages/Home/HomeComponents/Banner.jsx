@@ -46,28 +46,22 @@ const Banner = () => {
                             <img className="relative" src="https://i.postimg.cc/SsbvmX38/banner-b-1.jpg" />
                             <h1 className="absolute top-12 p-12 md:p-24 uppercase text-2xl md:text-7xl  text-basic">
                                 Trussardi{' '}
-                                <span className='brandSpan'
-                                // style={{ color: 'red', fontWeight: 'bold' }}
-                                >
+                                <span className='brandSpan'>
                                     <Typewriter
                                         words={['Donna']}
                                         loop={true}
-                                        // loop={5}
                                         cursor
                                         cursorStyle='_'
                                         typeSpeed={70}
                                         deleteSpeed={50}
                                         delaySpeed={3000}
-                                    // onLoopDone={handleDone}
-                                    // onType={handleType}
                                     />
                                 </span>
                             </h1>
-                            {/* <p className="legend bannerText">Trussardi Donna</p> */}
                         </div>
                     )
                 }
-                <div className="h-[90vh]">
+                {/* <div className="h-[90vh]">
                     <img className="relative" src="https://i.postimg.cc/SsbvmX38/banner-b-1.jpg" />
                     <p className="legend bannerText">Trussardi Donna</p>
                 </div>
@@ -90,7 +84,7 @@ const Banner = () => {
                 <div className="h-[90vh]">
                     <img src="https://i.postimg.cc/vHZS8wqP/banner-7.jpg" />
                     <p className="legend">Atkinsons Oud</p>
-                </div>
+                </div> */}
             </Carousel>
         </div>
     );
