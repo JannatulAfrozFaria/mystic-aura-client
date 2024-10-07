@@ -9,7 +9,7 @@ const Banner = () => {
                 <div className="h-[90vh]">
                     {/* <img src="https://i.ibb.co/YhznL0P/banner-6.jpg" /> */}
                     <img className="relative" src="https://i.postimg.cc/SsbvmX38/banner-b-1.jpg" />
-                    <h1 className="">
+                    <h1 className="absolute p-12">
                         Trussardi{' '}
                         <span className='text-2xl md:text-7xl banner-title'
                         // style={{ color: 'red', fontWeight: 'bold' }}
