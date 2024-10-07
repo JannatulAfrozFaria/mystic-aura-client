@@ -8,26 +8,26 @@ const Banner = () => {
             <Carousel>
                 <div className="h-[90vh]">
                     {/* <img src="https://i.ibb.co/YhznL0P/banner-6.jpg" /> */}
-                    <img src="https://i.postimg.cc/SsbvmX38/banner-b-1.jpg" />
-                    <h1>
-                                        {/* Life is simple{' '} */}
-                                        <span className='text-2xl md:text-7xl banner-title'
-                                        // style={{ color: 'red', fontWeight: 'bold' }}
-                                        >
-                                            <Typewriter
-                                                words={[`${banner.title}`]}
-                                                loop={true}
-                                                // loop={5}
-                                                cursor
-                                                cursorStyle='_'
-                                                typeSpeed={70}
-                                                deleteSpeed={50}
-                                                delaySpeed={3000}
-                                            // onLoopDone={handleDone}
-                                            // onType={handleType}
-                                            />
-                                        </span>
-                                    </h1>
+                    <img className="relative" src="https://i.postimg.cc/SsbvmX38/banner-b-1.jpg" />
+                    <h1 className="">
+                        Trussardi{' '}
+                        <span className='text-2xl md:text-7xl banner-title'
+                        // style={{ color: 'red', fontWeight: 'bold' }}
+                        >
+                            <Typewriter
+                                words={['Donna']}
+                                loop={true}
+                                // loop={5}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={3000}
+                            // onLoopDone={handleDone}
+                            // onType={handleType}
+                            />
+                        </span>
+                    </h1>
                     <p className="legend bannerText">Trussardi Donna</p>
                 </div>
                 <div className="h-[90vh]">
