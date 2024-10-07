@@ -1,5 +1,7 @@
 import Title from "../../../UtilityComponents/Title";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const ClientReviews = () => {
     return (

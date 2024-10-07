@@ -84,15 +84,15 @@ const Brands = () => {
         <div className="my-12 md:my-24">
             <Title heading={'Brands'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'} ></Title>
             <div className="w-5/6 mx-auto md:w-full">
-            <Marquee pauseOnClick={true} pauseOnHover={true} className='bg-gray-200 p-10 border border-y-4 border-orange-600'>
+            <Marquee pauseOnClick={true} pauseOnHover={true} className='bg-[#ffe7f4] p-10 border border-y-4 border-[#c97ca9] border-double'>
                 {
                     perfumeBrands.map(item => (
                         <div key={item.id} className='flex gap-4 px-10 items-center'>
                             <div>
-                                <img className="rounded-lg shadow-lg" src={item.image} alt="icon-company" />
+                                <img className="rounded-lg shadow-lg w-16 h-16" src={item.image} alt="icon-company" />
                             </div>
                             <div className=''>
-                                <h1 className="text-dark text-2xl">{item.name} </h1>
+                                <h1 className="text-dark text-2xl md:text-4xl uppercase protest">{item.name} </h1>
                             </div>
                         </div>
                     ))
