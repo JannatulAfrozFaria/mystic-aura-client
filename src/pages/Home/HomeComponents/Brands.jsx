@@ -26,7 +26,7 @@ const Brands = () => {
         {
           id: 5,
           name: "Tom Ford",
-          image: "https://i.postimg.cc/cHhxk9ZK/tom-ford.jpg",
+          image: "https://i.ibb.co/K0mb05s/brand4.jpg",
         },
         {
           id: 6,
