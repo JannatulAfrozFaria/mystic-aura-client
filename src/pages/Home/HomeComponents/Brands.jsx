@@ -66,17 +66,17 @@ const Brands = () => {
         {
           id: 13,
           name: "Lancôme",
-          image: "https://i.postimg.cc/90Pxh9WL/lancome.jpg",
+          image: "https://i.ibb.co/nQ04C5Y/brand15.jpg",
         },
         {
           id: 14,
           name: "Hugo Boss",
-          image: "https://i.postimg.cc/Jhs3RHLz/hugo-boss.jpg",
+          image: "https://i.ibb.co/dkh9Sb5/brand14.jpg",
         },
         {
           id: 15,
           name: "Calvin Klein",
-          image: "https://i.postimg.cc/J49xhSsz/calvin-klein.jpg",
+          image: "https://i.ibb.co/zrfktWW/brand17.webp",
         },
       ];
       
