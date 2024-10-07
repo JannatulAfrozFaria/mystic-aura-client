@@ -3,13 +3,13 @@
 const Title = ({heading, description,image}) => {
     return (
         <div>
-            <h1>{heading} </h1>
+            <h1 className="text-3xl brandSpan">{heading} </h1>
             <div>
                 <hr />
                 <img src={image} alt="" />
                 <hr />
             </div>
-            <p>{description} </p>
+            <p className="w-3/4 mx-auto">{description} </p>
         </div>
     );
 };
