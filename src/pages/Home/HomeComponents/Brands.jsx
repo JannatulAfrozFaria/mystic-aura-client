@@ -6,7 +6,7 @@ const Brands = () => {
         {
           id: 1,
           name: "Chanel",
-          image: "https://i.postimg.cc/T3WsyhzR/chanel.jpg",
+          image: "https://i.ibb.co/q5J5XvL/brand16.png",
         },
         {
           id: 2,
@@ -89,7 +89,7 @@ const Brands = () => {
                     perfumeBrands.map(item => (
                         <div key={item.id} className='flex gap-4 px-10 items-center'>
                             <div>
-                                <img src="" alt="icon-company" />
+                                <img src={item.image} alt="icon-company" />
                             </div>
                             <div className=''>
                                 <h1 className="text-theme text-4xl">{item.name} </h1>
