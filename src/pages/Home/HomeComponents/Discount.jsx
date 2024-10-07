@@ -1,7 +1,16 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 
-const Discount = () => {
+const Discount = ({seconds}) => {
+    const [countdown,setCountdown] = useState(seconds)
+    const timerId = useRef()
+    useEffect(()=>{
+        timerId.current = setInterval(()=>{
+            setCountdown(prev=>prev-1)
+        },1000)
+        return () => clearInterval(timerId)
+},[])
     return (
         <div className="mb-12 md:mb-24">
             <div className="flex flex-col-reverse md:flex-row">
