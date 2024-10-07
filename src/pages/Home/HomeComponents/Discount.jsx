@@ -5,15 +5,6 @@ import Title from "../../../UtilityComponents/Title";
 
 
 const Discount = () => {
-    // const Discount = ({seconds}) => {
-    //     const [countdown,setCountdown] = useState(seconds)
-    //     const timerId = useRef()
-    //     useEffect(()=>{
-    //         timerId.current = setInterval(()=>{
-    //             setCountdown(prev=>prev-1)
-    //         },1000)
-    //         return () => clearInterval(timerId)
-    // },[])
     return (
         <div className="mb-12 md:mb-24">
              <Title heading={'Latest Offers'} image={'https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'} description={""}></Title>
