@@ -38,17 +38,16 @@ const CountDown =({seconds}) => {
     return (
         <div>
              {/* <h1 className="text-3xl roboto text-dark"> {formatTime(countdown)} </h1> */}
-             <h1 className="text-2xl roboto text-dark"> 
+             <h1 className="text-xl roboto text-dark"> 
                 <span className="text-3xl protest"> {days} </span>
                 Days
                 <span className="text-3xl protest"> {hours} </span>
-                Hours
+                Hours <br className="block md:hidden" />
                 <span className="text-3xl protest"> {minutes} </span>
                 Minutes
                 <span className="text-3xl protest"> {secs} </span>
                 Seconds
-                 </h1>
-
+                </h1>
         </div>
     );
 };

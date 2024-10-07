@@ -8,20 +8,20 @@ const Discount = () => {
     return (
         <div className="mb-12 md:mb-24">
              <Title heading={'Latest Offers'} image={'https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'} description={""}></Title>
-            <div className="flex flex-col-reverse md:flex-row">
+            <div className="flex flex-col-reverse md:flex-row w-5/6 mx-auto md:w-full ">
                 <div>
-                    <img className="h-full" src="https://i.ibb.co/7pN76J6/discount.jpg" alt="discount" />
+                    <img className="w-full h-full" src="https://i.ibb.co/7pN76J6/discount.jpg" alt="discount" />
                 </div>
                 <div className="bg-[#FBCFE8] p-8 grid grid-cols-1 gap-4 w-full justify-center text-center">
-                    <div className=" relative bg-white rounded-full w-1/3 mx-auto h-[30vh]">
-                        <div className="absolute top-1/4 ">
+                    <div className=" relative bg-white rounded-full w-full md:w-1/3 mx-auto h-[30vh]">
+                        <div className="absolute top-1/4 left-4 md:left-0 ">
                             <p className="uppercase" >Discount</p>
                             <h1 className="text-5xl text-dark protest ">Winter 2024</h1>
                             <p className="uppercase priceTag text-2xl " >Sale <span>50%</span> </p>
                         </div>
                     </div>
                     {/* COUNT----DOWN */}
-                    <div>
+                    <div className="w-3/4 mx-auto md:w-full">
                         <CountDown seconds={600000} ></CountDown>
                     </div>
                     <div>
