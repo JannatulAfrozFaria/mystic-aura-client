@@ -16,7 +16,7 @@ const Discount = () => {
     // },[])
     return (
         <div className="mb-12 md:mb-24">
-             <Title heading={'Latest Offers'} image={'https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'} description={"Discover our Best Sellers – a collection of top-rated fragrances that have captivated customers worldwide. From timeless classics to modern scents, these perfumes are loved for their unique blends, long-lasting essence, and luxurious appeal. Explore the finest fragrances, perfect for any occasion, and find your signature scent among the best of the best."}></Title>
+             <Title heading={'Latest Offers'} image={'https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'} description={""}></Title>
             <div className="flex flex-col-reverse md:flex-row">
                 <div>
                     <img className="h-full" src="https://i.ibb.co/7pN76J6/discount.jpg" alt="discount" />
