@@ -5,8 +5,17 @@ import 'swiper/css/pagination';
 // import './styles.css';
 import PefumeData from '/src/perfumes.json'
 import { Pagination } from 'swiper/modules';
+// import { useEffect, useState } from "react";
 
 const FeaturedPerfumes = () => {
+    // const [perfumes,setPerfumes] = useState([])
+    // useEffect(()=>{
+    //     fetch('perfumes.json')
+    //     .then(res => res.json())
+    //     .then(data => setPerfumes(data.perfumes)
+    // )
+        
+    // },[])
     const perfumes = PefumeData.perfumes;
     return (
         <div className="mb-12">
@@ -22,14 +31,13 @@ const FeaturedPerfumes = () => {
                     modules={[Pagination]}
                     className="mySwiper"
                 >
-                    {perfumes.slice(16,34). map((perfume)=>
+                    {perfumes?.slice(16,34).map((perfume)=>
                     <SwiperSlide key={perfume.id}>
                         <img className="relative w-full h-[15vh] md:h-[40vh] shadow-2xl" src={perfume.image} alt="perfume-photo" />
                         <div className="absolute bottom-3 md:bottom-8 left-1 md:left-4 w-5/6 grid grid-cols-1 md:grid-cols-4 gap-2 ">
                             <p className=" col-span-1 priceTag  text-sm   flex items-center justify-center ">$ <span>{perfume.price}</span> </p>
                             <p className="col-span-3 nameTag w-full text-sm hidden md:flex items-center justify-center "><span>{perfume.name}</span> </p>
                         </div>
-                        
                     </SwiperSlide>
                     )}
                 </Swiper>

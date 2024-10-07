@@ -6,14 +6,20 @@ import 'swiper/css/pagination';
 // import './styles.css';
 import PefumeData from '/src/perfumes.json'
 import { Pagination } from 'swiper/modules';
-
+// import { useEffect, useState } from "react";
 const Categories = () => {
+    // const [perfumes,setPerfumes] = useState([])
+    // useEffect(()=>{
+    //     fetch('../../../perfumes.json')
+    //     .then(res => res.json())
+    //     .then(data => setPerfumes(data))
+    // },[])
     const perfumes = PefumeData.perfumes;
     return (
         <div className="mb-12">
             {/* <Title heading={'Categories'} image={'https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png'}></Title> */}
             <Title heading={'Categories'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}></Title>
-            <div>
+            {/* <div>
                 <Swiper
                     slidesPerView={4}
                     spaceBetween={30}
@@ -30,7 +36,8 @@ const Categories = () => {
                     </SwiperSlide>
                     )}
                 </Swiper>
-            </div>
+            </div> */}
+            
         </div>
     );
 };
