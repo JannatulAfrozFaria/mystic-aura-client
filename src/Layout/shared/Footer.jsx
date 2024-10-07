@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div>
             <footer className="footer bg-black text-pink-200 p-10 grid grid-cols-1 md:grid-cols-5 gap-6">
-                <nav className="col-span-2">
+                <nav className="col-span-1 md:col-span-2">
                     <div className="flex items-start text-pink-200 ">
                         <span>
                             <img className="w-20" src="https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png" alt="mystic-aura-logo" />
@@ -44,7 +44,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </nav>
-                <nav>
+                <nav className="col-span-1">
                     <h6 className="uppercase roboto font-extrabold">Company</h6>
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
@@ -53,7 +53,7 @@ const Footer = () => {
                     <a className="link link-hover">Login</a>
                     <a className="link link-hover">Advertisement</a>
                 </nav>
-                <nav>
+                <nav className="col-span-1">
                     <h6 className="uppercase roboto font-extrabold">Information</h6>
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>
@@ -62,13 +62,7 @@ const Footer = () => {
                     <a className="link link-hover">Terms of use</a>
                     <a className="link link-hover">Privacy and Policy</a> 
                 </nav>
-                {/* <nav>
-                    <h6 className="uppercase roboto font-extrabold">Legal</h6>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
-                </nav> */}
-                <form>
+                <form className="col-span-1">
                     <h6 className="uppercase roboto font-extrabold">Newsletter</h6>
                     <p className="">Get 15% off your next order. Be the first to learn about promotions special events, new arrivals and more.</p>
                     <fieldset className="form-control ">

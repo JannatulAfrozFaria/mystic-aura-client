@@ -50,7 +50,7 @@ const Banner = () => {
                     Banners.map((banner) => {
                         const [firstWord, ...restWords] = banner.title.split(' '); // Split the title into first word and rest of the words
                         return (
-                            <div  key={banner.id} className="h-[90vh]">
+                            <div  key={banner.id} className="h-[27vh] md:h-[90vh]">
                                 <img className="relative" src={banner.image} alt={banner.title} />
                                 <h1 className="absolute top-12 p-12 md:p-24 uppercase text-2xl md:text-7xl text-basic">
                                     {firstWord}{' '} {/* First word of the title */}

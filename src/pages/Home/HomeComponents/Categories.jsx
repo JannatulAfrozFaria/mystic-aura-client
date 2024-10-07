@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 // import './styles.css';
-import PefumeData from '/public/perfumes.json'
+import PefumeData from '/src/perfumes.json'
 import { Pagination } from 'swiper/modules';
 
 const Categories = () => {

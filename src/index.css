@@ -46,14 +46,24 @@
 /* FEATURED */
 .priceTag{
   background-color: black;
-  color: #FBCFE8;
+  color: #f781c4;
   font-weight: 500;
   font-family: "Protest Strike", sans-serif;
-  border-radius: 0% 3% 0% 3%;
+  border: 2px solid  #FBCFE8;
+  border-radius: 0px 16px;
   padding: 3%;
 }
 .priceTag span{
-  color: #f781c4;
+  color: #FBCFE8;
+}
+.nameTag{
+  background-color: #FBCFE8;
+  color: black;
+  font-weight: 500;
+  font-family: "Protest Strike", sans-serif;
+  border: 2px solid  #f781c4;
+  border-radius: 16px 0px ;
+  padding: 3% ;
 }
 /* FOOTER------ */
 .btn-basic{
