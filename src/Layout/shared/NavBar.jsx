@@ -3,13 +3,13 @@
 const NavBar = () => {
     const navItems = <>
     <li className="menu-item">
-        <a href="/" className="text-pink-500 hover:text-pink-700">Home</a>
+        <a href="/" className="nav-item">Home</a>
     </li>
     <li className="menu-item">
-        <a href="/" className="text-pink-500 hover:text-pink-700">Shop</a>
+        <a href="/" className="nav-item">Shop</a>
     </li>
     <li className="menu-item">
-        <a href="/" className="text-pink-500 hover:text-pink-700">Blog</a>
+        <a href="/" className="nav-item">Blog</a>
     </li>
     </>
     return (
@@ -37,7 +37,7 @@ const NavBar = () => {
                             {navItems}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl protest">Mystic Aura</a>
+                    <a className="btn btn-ghost text-xl protest nav-item">Mystic Aura</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 roboto font-semibold">
