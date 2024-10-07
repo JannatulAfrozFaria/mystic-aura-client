@@ -25,6 +25,11 @@
   font-weight: 600;
   color: #FBCFE8;
 }
+.navItem :hover{
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 800;
+  color: #f997cebc;
+}
 /* FOOTER------ */
 .btn-basic{
     background-color:#FBCFE8 ;
