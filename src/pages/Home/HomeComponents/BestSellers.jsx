@@ -5,7 +5,7 @@ const BestSellers = () => {
     return (
         <div>
             <div className="grid grid-cols-2 gap-6">
-                {perfumes.map((perfume)=>
+                {perfumes.slice(40,48).map((perfume)=>
                 <div key={perfume.id} className='grid grid-cols-5 gap-4'>
                     <div className='col-span-2'>
                         <img src={perfume.image} alt="perfume_image" />
