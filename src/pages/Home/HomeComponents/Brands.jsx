@@ -87,14 +87,12 @@ const Brands = () => {
             <Marquee pauseOnClick={true} pauseOnHover={true} className='bg-gray-200 p-10 border border-y-4 border-orange-600'>
                 {
                     perfumeBrands.map(item => (
-                        <div key={item.id} className='flex gap-4 px-10 items-end'>
+                        <div key={item.id} className='flex gap-4 px-10 items-center'>
                             <div>
-                                {/* <Image width={70} height={70} src={item.image} alt='icon-company'></Image> */}
                                 <img src="" alt="icon-company" />
                             </div>
                             <div className=''>
-                                <h1 className="text-theme text-4xl">{item.firmName} </h1>
-                                <p className='text-gray text-xl'>{item.firmType} </p>
+                                <h1 className="text-theme text-4xl">{item.name} </h1>
                             </div>
                         </div>
                     ))
