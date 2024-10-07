@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Discount = () => {
     return (
-        <div>
+        <div className="mb-12 md:mb-24">
             <div className="flex flex-col-reverse md:flex-row">
                 <div>
                     <img src="" alt="" />
