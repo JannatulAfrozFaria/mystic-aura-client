@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+
 import { Link } from "react-router-dom";
+import CountDown from "../../../UtilityComponents/CountDown";
 
 
 const Discount = ({seconds}) => {
@@ -25,7 +26,7 @@ const Discount = ({seconds}) => {
                         </div>
                         {/* COUNT----DOWN */}
                         <div>
-                                <h1> {countdown} </h1>
+                            <CountDown></CountDown>
                         </div>
                         <div>
                             <button className="text-dark roboto uppercase border-2 border-b-black">
