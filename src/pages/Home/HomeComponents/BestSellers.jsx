@@ -1,9 +1,11 @@
+import Title from '../../../UtilityComponents/Title';
 import PefumeData from '/src/perfumes.json'
 
 const BestSellers = () => {
     const perfumes = PefumeData.perfumes;
     return (
         <div>
+             <Title heading={'Categories'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}></Title>
             <div className="grid grid-cols-2 gap-6">
                 {perfumes.slice(40,48).map((perfume)=>
                 <div key={perfume.id} className='grid grid-cols-5 gap-4'>
