@@ -22,7 +22,7 @@ const FeaturedPerfumes = () => {
                     modules={[Pagination]}
                     className="mySwiper"
                 >
-                    {perfumes.map((perfume)=>
+                    {perfumes.slice(16). map((perfume)=>
                     <SwiperSlide key={perfume.id}>
                         <img className=" w-full h-[40vh] shadow-2xl" src={perfume.image} alt="perfume-photo" />
                     </SwiperSlide>
