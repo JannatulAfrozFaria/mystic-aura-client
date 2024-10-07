@@ -3,18 +3,18 @@
 const NavBar = () => {
     const navItems = <>
     <li className="menu-item">
-        <a href="/" className="">Home</a>
+        <a href="/" className="navItem">Home</a>
     </li>
     <li className="menu-item">
-        <a href="/" className="">Shop</a>
+        <a href="/" className="navItem">Shop</a>
     </li>
     <li className="menu-item">
-        <a href="/" className="">Blog</a>
+        <a href="/" className="navItem">Blog</a>
     </li>
     </>
     return (
         <div>
-            <div className="navbar fixed z-10 bg-transparent nav-item">
+            <div className="navbar fixed z-10 bg-transparent ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,19 +33,20 @@ const NavBar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] roboto font-semibold mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] roboto font-semibold mt-3 w-52 p-2 shadow navItem">
                             {navItems}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl protest nav-item">Mystic Aura</a>
+                    <img className="w-16" src="https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png" alt="" />
+                    <a className="btn btn-ghost text-xl protest navItem">Mystic Aura</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 roboto font-semibold">
+                    <ul className="menu menu-horizontal px-1 roboto font-semibold navItem">
                         {navItems}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn btn-basic">Login</a>
+                    <a className="btn btn-basic btn-sm">Login</a>
                 </div>
             </div>
         </div>

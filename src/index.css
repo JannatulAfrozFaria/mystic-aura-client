@@ -30,6 +30,11 @@
   font-weight: 800;
   color: #f997cebc;
 }
+/* BANNER----- */
+.bannerText{
+  background-color: #FBCFE8;
+  color: black;
+}
 /* FOOTER------ */
 .btn-basic{
     background-color:#FBCFE8 ;
