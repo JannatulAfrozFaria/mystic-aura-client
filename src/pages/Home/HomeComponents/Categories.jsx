@@ -1,17 +1,16 @@
 import Title from "../../../UtilityComponents/Title";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import './styles.css';
-// import required modules
+// import './styles.css';
+import PefumeData from '/public/perfumes.json'
 import { Pagination } from 'swiper/modules';
 
 const Categories = () => {
+    const perfumes = PefumeData.perfumes;
     return (
-        <div>
+        <div className="mb-12">
             {/* <Title heading={'Categories'} image={'https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png'}></Title> */}
             <Title heading={'Categories'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}></Title>
             <div>
@@ -25,15 +24,11 @@ const Categories = () => {
                     modules={[Pagination]}
                     className="mySwiper"
                 >
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide>
-                    <SwiperSlide>Slide 5</SwiperSlide>
-                    <SwiperSlide>Slide 6</SwiperSlide>
-                    <SwiperSlide>Slide 7</SwiperSlide>
-                    <SwiperSlide>Slide 8</SwiperSlide>
-                    <SwiperSlide>Slide 9</SwiperSlide>
+                    {perfumes.map((perfume)=>
+                    <SwiperSlide key={perfume.id}>
+                        <img className=" w-full h-[40vh] shadow-2xl" src={perfume.image} alt="perfume-photo" />
+                    </SwiperSlide>
+                    )}
                 </Swiper>
             </div>
         </div>
