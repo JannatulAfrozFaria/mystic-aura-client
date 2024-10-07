@@ -1,6 +1,6 @@
 
 
-const Title = ({ heading, description, image }) => {
+const Title = ({ heading, description, image,imageClass }) => {
     return (
         <div className="my-6 text-center">
             <h1 className="text-3xl brandSpan uppercase roboto">{heading} </h1>
@@ -9,7 +9,7 @@ const Title = ({ heading, description, image }) => {
                     <hr  className="border-2 border-[#d282afbc] w-40" />
                 </div>
                 <div>
-                    <img className="w-10" src={image} alt="" />
+                    <img className={`w-10 ${imageClass}`} src={image} alt="" />
                 </div>
                 <div>
                     <hr className="border-2 border-[#d282afbc] w-40" />
