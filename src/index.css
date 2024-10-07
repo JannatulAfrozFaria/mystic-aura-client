@@ -65,6 +65,23 @@
   border-radius: 16px 0px ;
   padding: 3% ;
 }
+/* BEST-SELLER */
+.bestImage{
+  /* border-radius: 0px 20px 20px 20px; */
+  border-radius: 0% 40% 0% 40%;
+}
+.bestImage1{
+  /* border-radius: 0px 20px 20px 20px; */
+  border-radius:  40% 0% 40% 0%;
+}
+.pName{
+  color: #c97ca9;
+}
+.bestPrice{
+  font-weight: 500;
+  font-family: "Protest Strike", sans-serif;
+  color: #c97ca9;
+}
 /* FOOTER------ */
 .btn-basic{
     background-color:#FBCFE8 ;
