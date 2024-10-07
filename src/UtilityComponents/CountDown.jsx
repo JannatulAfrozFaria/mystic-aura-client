@@ -10,6 +10,10 @@ const CountDown =({seconds}) => {
         return () => clearInterval(timerId.current)
     },[])
     useEffect(()=>{
+        if(countdown <= 0){
+            clearInterval(timerId.current)
+            alert("Time Over")
+        }
 
     },[countdown])
     return (
