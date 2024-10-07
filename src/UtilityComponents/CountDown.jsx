@@ -25,7 +25,7 @@ const CountDown =({seconds}) => {
     },[countdown])
     return (
         <div>
-             <h1 className="text-3xl roboto text-dark"> {countdown} </h1>
+             <h1 className="text-3xl roboto text-dark"> {formatTime(countdown)} </h1>
         </div>
     );
 };
