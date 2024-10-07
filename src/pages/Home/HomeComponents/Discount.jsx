@@ -15,7 +15,7 @@ const Discount = () => {
                             <p className="uppercase priceTag" >Sale <span>50%</span> </p>
                         </div>
                         <div>
-                            <button className="text-dark uppercase  underline-offset-1">
+                            <button className="text-dark uppercase border-2 border-b-black">
                                 <Link to={'/shop'}>Shop Now</Link>
                             </button>
                         </div>
