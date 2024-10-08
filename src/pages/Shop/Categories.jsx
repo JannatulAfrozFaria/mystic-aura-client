@@ -40,7 +40,7 @@ const Categories = () => {
                                 <p><span>Stock:</span> {perfume.quantity} Units </p>
                                 <p><span className=''>Price:</span>  <span className='bestPrice'> $ {perfume.price}</span></p>
                                 <button>
-                                   <Link> Buy </Link>
+                                   <Link to={'/shop'}> Buy </Link>
                                 </button>
                             </div>
                         </div>
