@@ -8,6 +8,8 @@ const Categories = () => {
     const oriental = perfumes.filter(item => item.category.toLowerCase() === 'oriental');
     const fresh = perfumes.filter(item => item.category.toLowerCase() === 'fresh');
     const Gourmand = perfumes.filter(item => item.category.toLowerCase() === 'Gourmand');
+    const spicy = perfumes.filter(item => item.category.toLowerCase() === 'spicy');
+    const fruity = perfumes.filter(item => item.category.toLowerCase() === 'fruity');
     
 
     // useEffect(()=>{
