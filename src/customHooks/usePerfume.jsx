@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 
 const usePerfume = () => {
-    const [perfumeCollection,setPerfumeCollection] = useState([]);
+    const [perfumes,setPerfumes] = useState([]);
     const [loading,setLoading] = useState(true)
     useEffect(()=>{
         fetch('/perfumeCollection.json')
         .then(res => res.json())
         .then(data => {
-            setPerfumeCollection(data);
+            setPerfumes(data);
             setLoading(false);
         })
-    },[perfumeCollection])
-    return {perfumeCollection,loading}
+    },[perfumes])
+    return {perfumes,loading}
 };
 
 export default usePerfume;
