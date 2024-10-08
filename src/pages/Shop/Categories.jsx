@@ -7,13 +7,14 @@ import 'swiper/css/pagination';
 import PefumeData from '/src/perfumes.json'
 import { Pagination } from 'swiper/modules';
 import { useEffect, useState } from "react";
+import usePerfume from "../../customHooks/usePerfume";
 const Categories = () => {
-    const [perfumeCollection,setPerfumeCollection] = useState([])
-    useEffect(()=>{
-        fetch('/perfumeCollection.json')
-        .then(res => res.json())
-        .then(data => setPerfumeCollection(data))
-    },[perfumeCollection])
+    const {perfumes,loading}= usePerfume()
+    // useEffect(()=>{
+    //     fetch('/perfumeCollection.json')
+    //     .then(res => res.json())
+    //     .then(data => setPerfumeCollection(data))
+    // },[perfumeCollection])
     // const perfumes = PefumeData.perfumes;
     return (
         <div className="my-12">
