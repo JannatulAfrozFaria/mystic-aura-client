@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
 
-const CategoryCard = () => {
+const CategoryCard = ({perfume}) => {
+    const {id,image,name, brandName,origin,price} = perfume;
     return (
         <div>
             <div key={perfume.id} className="flex flex-col">
