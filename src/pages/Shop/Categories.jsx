@@ -57,10 +57,10 @@ const Categories = () => {
                         <CategoryTab items={oriental} ></CategoryTab>
                     </TabPanel>
                     <TabPanel>
-                        <CategoryTab items={woody} ></CategoryTab>
+                        <CategoryTab items={fresh} ></CategoryTab>
                     </TabPanel>
                     <TabPanel>
-                        <CategoryTab items={floral} ></CategoryTab>
+                        <CategoryTab items={Gourmand} ></CategoryTab>
                     </TabPanel>
                     <TabPanel>
                         <CategoryTab items={woody} ></CategoryTab>
