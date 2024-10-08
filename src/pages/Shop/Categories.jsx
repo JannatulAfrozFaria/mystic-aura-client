@@ -27,20 +27,11 @@ const Categories = () => {
         <div className="my-12">
             <Title heading={'Categories'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}></Title>
             {/* TAB------- */}
-            <div role="tablist" className="tabs tabs-lifted">
-                <a role="tab" className="tab">Tab 1</a>
-                <a
-                    role="tab"
-                    className="tab tab-active text-primary [--tab-bg:yellow] [--tab-border-color:orange]">
-                    Tab 2
-                </a>
-                <a role="tab" className="tab">Tab 3</a>
-            </div>
             <div>
                 <Tabs>
                     <TabList>
-                        <Tab>Title 1</Tab>
-                        <Tab>Title 2</Tab>
+                        <Tab>Woody</Tab>
+                        <Tab>Floral</Tab>
                     </TabList>
 
                     <TabPanel>
