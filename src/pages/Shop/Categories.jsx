@@ -3,7 +3,9 @@ import Title from "../../UtilityComponents/Title";
 import usePerfume from "../../customHooks/usePerfume";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { useState } from "react";
 const Categories = () => {
+    const [tabIndex,setTabIndex] = useState(0);
     const { perfumes, loading } = usePerfume();
     const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
     const floral = perfumes.filter(item => item.category.toLowerCase() === 'floral');
