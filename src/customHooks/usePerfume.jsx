@@ -11,7 +11,7 @@ const usePerfume = () => {
             setLoading(false);
         })
     },[perfumeCollection])
-    return {perfumeCollection}
+    return {perfumeCollection,loading}
 };
 
 export default usePerfume;
