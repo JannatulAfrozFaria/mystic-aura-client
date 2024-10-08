@@ -2,8 +2,12 @@ import Title from "../../UtilityComponents/Title";
 import usePerfume from "../../customHooks/usePerfume";
 const Categories = () => {
     const {perfumes,loading}= usePerfume();
-    const men = perfumes.filter(item => item.category.toLowerCase() === 'woody');
-    console.log(men);
+    const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
+    const floral = perfumes.filter(item => item.category.toLowerCase() === 'floral');
+    const citrus = perfumes.filter(item => item.category.toLowerCase() === 'citrus');
+    const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
+    const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
+    
 
     // useEffect(()=>{
     //     fetch('/perfumeCollection.json')
@@ -15,7 +19,7 @@ const Categories = () => {
         <div className="my-12">
             <Title heading={'Categories'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}></Title>
             <div className="grid grid-cols-3 gap-4 md:gap-8 w-4/5 mx-auto">
-                {men.map((perfume)=>
+                {woody.map((perfume)=>
                     <div  key={perfume.id} className="flex flex-col">
                         <div className="flex justify-center items-end  h-[30vh]">
                             <img className=" w-1/2 h-[180px] categoryImageBorder " src={perfume.image} alt="perfume-photo" />
