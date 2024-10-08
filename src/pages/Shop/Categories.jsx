@@ -1,4 +1,4 @@
-import Title from "../../../UtilityComponents/Title";
+import Title from "../../UtilityComponents/Title";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -17,6 +17,7 @@ const Categories = () => {
     const perfumes = PefumeData.perfumes;
     return (
         <div className="mb-12">
+            
             {/* <Title heading={'Categories'} image={'https://i.postimg.cc/0y5NHLYT/mystic-aura-logo.png'}></Title> */}
             <Title heading={'Categories'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}></Title>
             {/* <div>

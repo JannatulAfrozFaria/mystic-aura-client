@@ -1,9 +1,13 @@
 
 import { Typewriter } from 'react-simple-typewriter';
-import Categories from '../Home/HomeComponents/Categories';
+import Categories from './Categories';
+import { Helmet } from 'react-helmet-async';
 const Shop = () => {
     return (
         <div>
+            <Helmet>
+                <title>Mystic Aura | Shop</title>
+            </Helmet>
             <div className='relative w-full h-[40vh] md:h-[90vh] bg-no-repeat bg-cover'
                         style={{
                             backgroundImage: `linear-gradient(45deg,rgba(7,25,82,0.2),rgba(0,0,0,0.4)), url("https://i.ibb.co/Gky236g/purple.jpg")`,
