@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaQuoteRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 const ClientReviews = () => {
    
@@ -11,7 +12,7 @@ const ClientReviews = () => {
         fetch('/perfumeCollection.json')
         .then(res => res.json())
         .then(data => setPerfumeCollection(data))
-    },[perfumeCollection])
+    },[reviews])
     const customers = [
         {
             id: 1,
