@@ -5,8 +5,8 @@ const Categories = () => {
     const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
     const floral = perfumes.filter(item => item.category.toLowerCase() === 'floral');
     const citrus = perfumes.filter(item => item.category.toLowerCase() === 'citrus');
-    const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
-    const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
+    const oriental = perfumes.filter(item => item.category.toLowerCase() === 'oriental');
+    const fresh = perfumes.filter(item => item.category.toLowerCase() === 'fresh');
     
 
     // useEffect(()=>{
