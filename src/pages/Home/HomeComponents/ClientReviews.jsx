@@ -163,7 +163,7 @@ const ClientReviews = () => {
                     className="grid grid-cols-1  gap-4 md:gap-6 justify-center w-5/6 mx-auto md:w-full roboto text-gray-500"
                 >
                     <Slider {...settings} >
-                        {customers.map(customer =>
+                        {reviews.map(customer =>
                             <div key={customer.id} className="">
                                 <div className=" bg-gradient-to-r from-white bestImage1 to-[#FBCFE8] grid grid-cols-1 p-4 md:p-6  shadow-xl h-[40vh] md:h-[50vh]">
                                     <div className='flex gap-3'>
