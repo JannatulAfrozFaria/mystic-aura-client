@@ -111,6 +111,11 @@
   color: #c97ca9;
   font-weight: 500;
 }
+/* Category---------- */
+.react-tabs__tab{
+  font-family: "Roboto Condensed", sans-serif;
+  color: #c97ca9;
+}
 .basicBg{
   background-color: #FBCFE8;
 }
