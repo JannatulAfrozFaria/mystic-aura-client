@@ -82,6 +82,7 @@
   font-family: "Protest Strike", sans-serif;
   color: #c97ca9;
 }
+
 /* CUSTOMER------REVIEW */
 .slick-slide > div{
   margin: 0 10px;
@@ -125,10 +126,24 @@
 .cardTextProperty span{
   font-weight: 600;
 }
-.categoryButton{
-  background-color: #FBCFE8;
-  color: white;
-  border-radius: 0% 3% 0% 3%;
+.categoryPrice{
   font-family: "Protest Strike", sans-serif;
+  color: #c97ca9;
+}
+.categoryButton{
+  background-color: #c97ca9;
+  color: white;
+  border: 0px solid transparent;
+  border-radius: 0% 40% 0% 40%;
+  font-family: "Protest Strike", sans-serif;
+  padding: 0% 5%;
+}
+.categoryButton:hover{
+  background-color: #FBCFE8;
+  color: #c97ca9;
+  border: 2px solid #c97ca9;
+  border-radius: 0% 40% 0% 40%;
+  font-family: "Protest Strike", sans-serif;
+  padding: 0% 5%;
 }
   
