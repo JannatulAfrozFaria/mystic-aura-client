@@ -36,6 +36,21 @@ const Categories = () => {
                 </a>
                 <a role="tab" className="tab">Tab 3</a>
             </div>
+            <div>
+                <Tabs>
+                    <TabList>
+                        <Tab>Title 1</Tab>
+                        <Tab>Title 2</Tab>
+                    </TabList>
+
+                    <TabPanel>
+                        <h2>Any content 1</h2>
+                    </TabPanel>
+                    <TabPanel>
+                        <h2>Any content 2</h2>
+                    </TabPanel>
+                </Tabs>
+            </div>
             {/* CATEGORIES */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16 w-4/5 mx-auto">
                 {woody.map((perfume) =>
