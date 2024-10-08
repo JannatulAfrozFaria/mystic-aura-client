@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Title from "../../UtilityComponents/Title";
 import usePerfume from "../../customHooks/usePerfume";
 const Categories = () => {
-    const {perfumes,loading}= usePerfume();
+    const { perfumes, loading } = usePerfume();
     const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
     const floral = perfumes.filter(item => item.category.toLowerCase() === 'floral');
     const citrus = perfumes.filter(item => item.category.toLowerCase() === 'citrus');
@@ -13,7 +13,7 @@ const Categories = () => {
     const fruity = perfumes.filter(item => item.category.toLowerCase() === 'fruity');
     const Aquatic = perfumes.filter(item => item.category.toLowerCase() === 'Aquatic');
     const Chypre = perfumes.filter(item => item.category.toLowerCase() === 'Chypre');
-    
+
 
     // useEffect(()=>{
     //     fetch('/perfumeCollection.json')
@@ -25,10 +25,19 @@ const Categories = () => {
         <div className="my-12">
             <Title heading={'Categories'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}></Title>
             {/* TAB------- */}
+            <div role="tablist" className="tabs tabs-lifted">
+                <a role="tab" className="tab">Tab 1</a>
+                <a
+                    role="tab"
+                    className="tab tab-active text-primary [--tab-bg:yellow] [--tab-border-color:orange]">
+                    Tab 2
+                </a>
+                <a role="tab" className="tab">Tab 3</a>
+            </div>
             {/* CATEGORIES */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16 w-4/5 mx-auto">
-                {woody.map((perfume)=>
-                    <div  key={perfume.id} className="flex flex-col">
+                {woody.map((perfume) =>
+                    <div key={perfume.id} className="flex flex-col">
                         <div className="flex justify-center items-end  h-[30vh]">
                             <img className=" w-1/2 h-[150px] md:h-[180px] categoryImageBorder " src={perfume.image} alt="perfume-photo" />
                         </div>
@@ -42,13 +51,13 @@ const Categories = () => {
                                 {/* <p><span>Stock:</span> {perfume.quantity} Units </p> */}
                                 <p><span className=''>Price:</span>  <span className='categoryPrice text-xl tracking-wider font-light'> $ {perfume.price}</span></p>
                                 <button className="btn categoryButton w-1/3 mx-auto mt-4 md:mt-2 text-2xl font-light">
-                                   <Link to={'/shop'}> Order </Link>
+                                    <Link to={'/shop'}> Order </Link>
                                 </button>
                             </div>
                         </div>
 
                     </div >
-                    )}
+                )}
             </div>
         </div>
     );
