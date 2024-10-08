@@ -45,7 +45,7 @@ const Categories = () => {
                         <Tab>Chypre</Tab>
                     </TabList>
                     <TabPanel>
-                        <CategoryTab></CategoryTab>
+                        <CategoryTab items={woody} ></CategoryTab>
                     </TabPanel>
                     <TabPanel>
 
