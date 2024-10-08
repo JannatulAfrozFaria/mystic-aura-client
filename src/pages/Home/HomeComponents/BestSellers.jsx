@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Title from '../../../UtilityComponents/Title';
 import PefumeData from '/src/perfumes.json'
 
@@ -5,7 +6,7 @@ const BestSellers = () => {
     const perfumes = PefumeData.perfumes;
     return (
         <div className='my-12 md:my-20'>
-            <Title heading={'Best Sellers'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'} 
+            <Title heading={'Best Sellers'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}
                 description={"Explore our collection of top-rated fragrances that captivate customers worldwide. From timeless classics to modern scents, these perfumes are loved for their unique blends, long-lasting essence, and luxurious appeal."}></Title>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-5/6 mx-auto md:w-full ">
                 {perfumes.slice(40, 42).map((perfume) =>
@@ -22,7 +23,9 @@ const BestSellers = () => {
                                 <p><span>Category:</span> {perfume.category} </p>
                                 {/* <p><span>Stock:</span> {perfume.quantity} Units </p> */}
                                 <div className='flex gap-1 items-center'><p className=''>Price:</p>  <span className='bestPrice'> $ {perfume.price}</span>  </div>
-                                
+                                <button className="btn categoryButton w-2/3 mx-auto mt-4 md:mt-2 text-xl font-light">
+                                    <Link to={'/shop'}> Add to Cart </Link>
+                                </button>
                             </div>
                         </div>
                     </div>
