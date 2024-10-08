@@ -6,7 +6,10 @@ const usePerfume = () => {
     useEffect(()=>{
         fetch('/perfumeCollection.json')
         .then(res => res.json())
-        .then(data => setPerfumeCollection(data))
+        .then(data => {
+            setPerfumeCollection(data);
+            setLoading(false);
+        })
     },[perfumeCollection])
     return {perfumeCollection}
 };
