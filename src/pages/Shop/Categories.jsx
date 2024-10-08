@@ -28,7 +28,7 @@ const Categories = () => {
             <Title heading={'Categories'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}></Title>
             {/* TAB------- */}
             <div>
-                <Tabs>
+                <Tabs defaultIndex={1} onSelect={(index)=>console.log(index)} >
                     <TabList>
                         <Tab>Woody</Tab>
                         <Tab>Floral</Tab>
