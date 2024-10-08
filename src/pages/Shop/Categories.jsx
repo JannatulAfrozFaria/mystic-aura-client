@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Title from "../../UtilityComponents/Title";
 import usePerfume from "../../customHooks/usePerfume";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 const Categories = () => {
     const { perfumes, loading } = usePerfume();
     const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
