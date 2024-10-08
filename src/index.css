@@ -118,7 +118,8 @@
 }
 .react-tabs__tab--selected{
   font-family: "Protest Strike", sans-serif;
-  color: #c97ca9;
+  /* color: #c97ca9;
+  background-color:  #FBCFE8; */
 }
 .basicBg{
   background-color: #FBCFE8;
@@ -143,16 +144,13 @@
   background-color: #c97ca9;
   color: white;
   border: 0px solid transparent;
-  border-radius: 0% 40% 0% 40%;
+  border-radius: 0% 50% 0% 50%;
   font-family: "Protest Strike", sans-serif;
-  padding: 0% 5%;
+  /* padding: 0% 5%; */
 }
 .categoryButton:hover{
   background-color: #FBCFE8;
   color: #c97ca9;
   border: 2px solid #c97ca9;
-  border-radius: 0% 40% 0% 40%;
-  font-family: "Protest Strike", sans-serif;
-  padding: 0% 5%;
 }
   

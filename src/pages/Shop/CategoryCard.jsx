@@ -15,8 +15,8 @@ const CategoryCard = ({item}) => {
                         <p><span>Brand:</span> {brandName} </p>
                         <p><span>Origin:</span> {origin} </p>
                         <p><span className=''>Price:</span>  <span className='categoryPrice text-xl tracking-wider font-light'> $ {price}</span></p>
-                        <button className="btn categoryButton w-1/3 mx-auto mt-4 md:mt-2 text-2xl font-light">
-                            <Link to={'/shop'}> Order </Link>
+                        <button className="btn categoryButton w-2/3 mx-auto mt-4 md:mt-2 text-xl font-light">
+                            <Link to={'/shop'}> Add to Cart </Link>
                         </button>
                     </div>
                 </div>

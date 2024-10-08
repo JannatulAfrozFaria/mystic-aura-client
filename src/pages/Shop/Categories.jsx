@@ -13,11 +13,11 @@ const Categories = () => {
     const citrus = perfumes.filter(item => item.category.toLowerCase() === 'citrus');
     const oriental = perfumes.filter(item => item.category.toLowerCase() === 'oriental');
     const fresh = perfumes.filter(item => item.category.toLowerCase() === 'fresh');
-    const Gourmand = perfumes.filter(item => item.category.toLowerCase() === 'Gourmand');
+    const Gourmand = perfumes.filter(item => item.category.toLowerCase() === 'gourmand');
     const spicy = perfumes.filter(item => item.category.toLowerCase() === 'spicy');
     const fruity = perfumes.filter(item => item.category.toLowerCase() === 'fruity');
-    const aquatic = perfumes.filter(item => item.category.toLowerCase() === 'Aquatic');
-    const chypre = perfumes.filter(item => item.category.toLowerCase() === 'Chypre');
+    const aquatic = perfumes.filter(item => item.category.toLowerCase() === 'aquatic');
+    const chypre = perfumes.filter(item => item.category.toLowerCase() === 'chypre');
 
 
     // useEffect(()=>{
@@ -33,8 +33,8 @@ const Categories = () => {
             <div className="w-4/5 mx-auto">
                 <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)} >
                     <TabList >
-                        <Tab>Woody</Tab>
                         <Tab>Floral</Tab>
+                        <Tab>Woody</Tab>
                         <Tab>Citrus</Tab>
                         <Tab>Oriental</Tab>
                         <Tab>Fresh</Tab>
@@ -45,10 +45,11 @@ const Categories = () => {
                         <Tab>Chypre</Tab>
                     </TabList>
                     <TabPanel>
-                        <CategoryTab items={woody} ></CategoryTab>
+                        <CategoryTab items={floral} ></CategoryTab>
                     </TabPanel>
                     <TabPanel>
-                        <CategoryTab items={floral} ></CategoryTab>
+                         <CategoryTab items={woody} ></CategoryTab>
+                       
                     </TabPanel>
                     <TabPanel>
                         <CategoryTab items={citrus} ></CategoryTab>
