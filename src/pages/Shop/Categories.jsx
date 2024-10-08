@@ -32,6 +32,14 @@ const Categories = () => {
                     <TabList>
                         <Tab>Woody</Tab>
                         <Tab>Floral</Tab>
+                        <Tab>Citrus</Tab>
+                        <Tab>Oriental</Tab>
+                        <Tab>Fresh</Tab>
+                        <Tab>Floral</Tab>
+                        <Tab>Woody</Tab>
+                        <Tab>Floral</Tab>
+                        <Tab>Woody</Tab>
+                        <Tab>Floral</Tab>
                     </TabList>
 
                     <TabPanel>
