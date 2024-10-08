@@ -9,9 +9,9 @@ const ClientReviews = () => {
    
     const [reviews,setReviews] = useState([])
     useEffect(()=>{
-        fetch('/perfumeCollection.json')
+        fetch('/Reviews.json')
         .then(res => res.json())
-        .then(data => setPerfumeCollection(data))
+        .then(data => setReviews(data))
     },[reviews])
     const customers = [
         {
