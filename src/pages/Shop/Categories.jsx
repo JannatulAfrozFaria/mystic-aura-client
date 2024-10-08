@@ -38,8 +38,8 @@ const Categories = () => {
                         <Tab>Gourmand</Tab>
                         <Tab>Spicy</Tab>
                         <Tab>Fruity</Tab>
-                        <Tab>Woody</Tab>
-                        <Tab>Floral</Tab>
+                        <Tab>Aquatic</Tab>
+                        <Tab>Chypre</Tab>
                     </TabList>
 
                     <TabPanel>
