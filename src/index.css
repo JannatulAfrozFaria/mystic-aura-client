@@ -116,6 +116,10 @@
   font-family: "Roboto Condensed", sans-serif;
   color: #c97ca9;
 }
+.react-tabs__tab--selected{
+  font-family: "Protest Strike", sans-serif;
+  color: #c97ca9;
+}
 .basicBg{
   background-color: #FBCFE8;
 }

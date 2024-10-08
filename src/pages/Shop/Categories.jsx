@@ -29,7 +29,7 @@ const Categories = () => {
         <div className="my-12">
             <Title heading={'Categories'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}></Title>
             {/* TAB------- */}
-            <div>
+            <div className="w-4/5 mx-auto mb-10">
                 <Tabs defaultIndex={tabIndex} onSelect={(index)=>setTabIndex(index)} >
                     <TabList>
                         <Tab>Woody</Tab>
