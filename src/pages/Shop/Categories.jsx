@@ -50,6 +50,30 @@ const Categories = () => {
                     <TabPanel>
                         <CategoryTab items={floral} ></CategoryTab>
                     </TabPanel>
+                    <TabPanel>
+                        <CategoryTab items={citrus} ></CategoryTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <CategoryTab items={oriental} ></CategoryTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <CategoryTab items={woody} ></CategoryTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <CategoryTab items={floral} ></CategoryTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <CategoryTab items={woody} ></CategoryTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <CategoryTab items={floral} ></CategoryTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <CategoryTab items={woody} ></CategoryTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <CategoryTab items={floral} ></CategoryTab>
+                    </TabPanel>
                 </Tabs>
             </div>
         </div>
