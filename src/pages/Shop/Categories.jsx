@@ -47,7 +47,7 @@ const Categories = () => {
                     <TabPanel>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16 w-4/5 mx-auto">
                             {woody.map((perfume) =>
-                            <CategoryCard key={perfume.id} items={perfume} ></CategoryCard>
+                            <CategoryCard key={perfume.id} item={perfume} ></CategoryCard>
                                 // <div key={perfume.id} className="flex flex-col">
                                 //     <div className="flex justify-center items-end  h-[30vh]">
                                 //         <img className=" w-1/2 h-[150px] md:h-[180px] categoryImageBorder " src={perfume.image} alt="perfume-photo" />
