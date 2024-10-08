@@ -26,6 +26,11 @@ Centralized platform for administrators to manage products, categories, and view
 
 ## npm package used for various purpose
 
+  - [React Helmet Async](https://www.npmjs.com/package/react-helmet-async)
+ - [React Slick](https://www.npmjs.com/package/react-slick)
+ - [React Tabs](https://www.npmjs.com/package/react-tabs)
+ - [React Fast Marquee](https://www.npmjs.com/package/react-fast-marquee)
+ - [Swiper js](https://swiperjs.com/get-started)
  - [Aos -Animate Scrool Library](https://github.com/michalsnik/aos)
  - [TanStack Query](https://tanstack.com/query/v4/docs/framework/react/quick-start)
 - [JWT](https://jwt.io/)
