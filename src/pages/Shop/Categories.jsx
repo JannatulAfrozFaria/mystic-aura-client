@@ -35,9 +35,9 @@ const Categories = () => {
                         <Tab>Citrus</Tab>
                         <Tab>Oriental</Tab>
                         <Tab>Fresh</Tab>
-                        <Tab>Floral</Tab>
-                        <Tab>Woody</Tab>
-                        <Tab>Floral</Tab>
+                        <Tab>Gourmand</Tab>
+                        <Tab>Spicy</Tab>
+                        <Tab>Fruity</Tab>
                         <Tab>Woody</Tab>
                         <Tab>Floral</Tab>
                     </TabList>
