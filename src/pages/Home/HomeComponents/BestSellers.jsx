@@ -20,8 +20,9 @@ const BestSellers = () => {
                                 <p><span>Origin:</span> {perfume.origin} </p>
                                 <p><span>Made for:</span> {perfume.userGroup} </p>
                                 <p><span>Category:</span> {perfume.category} </p>
-                                <p><span>Stock:</span> {perfume.quantity} Units </p>
+                                {/* <p><span>Stock:</span> {perfume.quantity} Units </p> */}
                                 <div className='flex gap-1 items-center'><p className=''>Price:</p>  <span className='bestPrice'> $ {perfume.price}</span>  </div>
+                                
                             </div>
                         </div>
                     </div>
