@@ -16,8 +16,8 @@ const Categories = () => {
     const Gourmand = perfumes.filter(item => item.category.toLowerCase() === 'Gourmand');
     const spicy = perfumes.filter(item => item.category.toLowerCase() === 'spicy');
     const fruity = perfumes.filter(item => item.category.toLowerCase() === 'fruity');
-    const Aquatic = perfumes.filter(item => item.category.toLowerCase() === 'Aquatic');
-    const Chypre = perfumes.filter(item => item.category.toLowerCase() === 'Chypre');
+    const aquatic = perfumes.filter(item => item.category.toLowerCase() === 'Aquatic');
+    const chypre = perfumes.filter(item => item.category.toLowerCase() === 'Chypre');
 
 
     // useEffect(()=>{
@@ -69,10 +69,10 @@ const Categories = () => {
                         <CategoryTab items={fruity} ></CategoryTab>
                     </TabPanel>
                     <TabPanel>
-                        <CategoryTab items={woody} ></CategoryTab>
+                        <CategoryTab items={aquatic} ></CategoryTab>
                     </TabPanel>
                     <TabPanel>
-                        <CategoryTab items={floral} ></CategoryTab>
+                        <CategoryTab items={chypre} ></CategoryTab>
                     </TabPanel>
                 </Tabs>
             </div>
