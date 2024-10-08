@@ -13,7 +13,7 @@ const BestSellers = () => {
                         <div className='col-span-2'>
                             <img className='w-full h-[20vh] md:h-[30vh] bestImage' src={perfume.image} alt="perfume_image" />
                         </div>
-                        <div className='col-span-3 p-4 md:p-6 text-gray-500 roboto'>
+                        <div className='col-span-3 p-4 md:p-6 text-gray-500 roboto '>
                             <h1 className='text-2xl md:text-4xl protest pName'> {perfume.name} </h1>
                             <div className="mt-1 md:mt-3 text-sm md:text-base">
                                 <p><span>Brand:</span> {perfume.brandName} </p>
