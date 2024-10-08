@@ -13,116 +13,116 @@ const ClientReviews = () => {
         .then(res => res.json())
         .then(data => setReviews(data))
     },[reviews])
-    const customers = [
-        {
-            id: 1,
-            name: "John Doe",
-            profession: "Fragrance Enthusiast",
-            companyLogo: "https://i.ibb.co/DDGrQ6d/logo2b.png",
-            companyType: "Corporate",
-            customerImage: "https://i.ibb.co/CP4ShLk/cus1.jpg",
-            review: "Mystic Aura has become my signature scent. The balance of fresh top notes and deep undertones makes it perfect for any occasion."
-        },
-        {
-            id: 2,
-            name: "Jane Smith",
-            profession: "Perfume Blogger",
-            companyLogo: "https://i.ibb.co/mXftBsv/logo1b.png",
-            companyType: "Design Studio",
-            customerImage: "https://i.postimg.cc/J4Whxz7B/cus2.avif",
-            review: "The floral blend in Blossom Dream is nothing short of perfection. It's soft yet captivating, and I receive compliments every time I wear it."
-        },
-        {
-            id: 3,
-            name: "Michael Lee",
-            profession: "Perfume Collector",
-            companyLogo: "https://i.ibb.co/RYpPHbB/logo1.png",
-            companyType: "Real Estate",
-            customerImage: "https://i.postimg.cc/VLRzF9H3/cus3.jpg",
-            review: "As a collector, I can say the craftsmanship behind Royal Essence is remarkable. The woody notes create a luxurious experience."
-        },
-        {
-            id: 4,
-            name: "Sarah Adams",
-            profession: "Fashion Editor",
-            companyLogo: "https://i.postimg.cc/nhPFJZ7H/fr9-removebg-preview.png",
-            companyType: "Advertising Agency",
-            customerImage: "https://i.ibb.co/chhfgnV/cus4.jpg",
-            review: "Summer Breeze is the perfect fragrance for anyone looking to feel refreshed. Its citrus notes are light yet energizing."
-        },
-        {
-            id: 5,
-            name: "David Carter",
-            profession: "Tech Entrepreneur",
-            companyLogo: "https://i.postimg.cc/Y9KLBtyv/fr1-removebg-preview.png",
-            companyType: "Tech Startup",
-            customerImage: "https://i.ibb.co/H2N4Xw9/cus5.jpg",
-            review: "The unique scent of Midnight Velvet is unforgettable. The boldness of the fragrance gives me confidence every time I wear it."
-        },
-        {
-            id: 6,
-            name: "Emily Johnson",
-            profession: "Boutique Owner",
-            companyLogo: "https://i.postimg.cc/kXHzM5jh/fr6.png",
-            companyType: "Retail",
-            customerImage: "https://i.ibb.co/7vvHbGf/cus6.jpg",
-            review: "Rose Petals is a true masterpiece. The floral notes are perfectly balanced, and it lasts all day without fading."
-        },
-        {
-            id: 7,
-            name: "Robert Evans",
-            profession: "Hotel Manager",
-            companyLogo: "https://i.postimg.cc/LsKWfbFt/fr2.png",
-            companyType: "Hospitality",
-            customerImage: "https://i.ibb.co/R6y0q5W/cus7.jpg",
-            review: "Ocean Mist is my go-to fragrance for summer. It’s refreshing and reminds me of a day spent by the sea."
-        },
-        {
-            id: 8,
-            name: "Olivia Wilson",
-            profession: "Restaurant Owner",
-            companyLogo: "https://i.postimg.cc/Ls3xP4TS/fr3.png",
-            companyType: "Hospitality",
-            customerImage: "https://i.ibb.co/njfTysy/cus8.jpg",
-            review: "Amber Nights has an alluring depth to it. It's perfect for an evening out and leaves a lasting impression."
-        },
-        {
-            id: 9,
-            name: "William Harris",
-            profession: "Fitness Club Owner",
-            companyLogo: "https://i.postimg.cc/k5JpftDG/fr13.png",
-            companyType: "Fitness",
-            customerImage: "https://i.ibb.co/gJZghTc/cus9.jpg",
-            review: "Citrus Rush is a great scent for an active lifestyle. It’s light, fresh, and invigorating, perfect for the gym or outdoor activities."
-        },
-        {
-            id: 10,
-            name: "Sophia Martinez",
-            profession: "Gallery Curator",
-            companyLogo: "https://i.postimg.cc/rmdgPGTV/fr11-removebg-preview.png",
-            companyType: "Art Gallery",
-            customerImage: "https://i.ibb.co/WgQdwbP/cus10.jpg",
-            review: "The artistic blend of notes in Artistry Bloom elevates the experience of wearing perfume to a whole new level. It’s a work of art."
-        },
-        {
-            id: 11,
-            name: "James Brown",
-            profession: "Café Owner",
-            companyLogo: "https://i.postimg.cc/GtwPgZzK/fr7-removebg-preview.png",
-            companyType: "Hospitality",
-            customerImage: "https://i.ibb.co/ZXS8v9n/cus11.jpg",
-            review: "Vanilla Spice adds a warm, comforting aura to my day. Customers frequently ask what fragrance I’m wearing, and I proudly share it."
-        },
-        {
-            id: 12,
-            name: "Grace Taylor",
-            profession: "Event Planner",
-            companyLogo: "https://i.postimg.cc/6qQ9DSw7/logo3-removebg-preview.png",
-            companyType: "Event Management",
-            customerImage: "https://i.ibb.co/nj7ZGH4/2009.webp",
-            review: "Golden Hour has a sophisticated elegance. It’s perfect for formal events, and I always receive compliments when I wear it."
-        }
-    ];
+    // const customers = [
+    //     {
+    //         id: 1,
+    //         name: "John Doe",
+    //         profession: "Fragrance Enthusiast",
+    //         companyLogo: "https://i.ibb.co/DDGrQ6d/logo2b.png",
+    //         companyType: "Corporate",
+    //         customerImage: "https://i.ibb.co/CP4ShLk/cus1.jpg",
+    //         review: "Mystic Aura has become my signature scent. The balance of fresh top notes and deep undertones makes it perfect for any occasion."
+    //     },
+    //     {
+    //         id: 2,
+    //         name: "Jane Smith",
+    //         profession: "Perfume Blogger",
+    //         companyLogo: "https://i.ibb.co/mXftBsv/logo1b.png",
+    //         companyType: "Design Studio",
+    //         customerImage: "https://i.postimg.cc/J4Whxz7B/cus2.avif",
+    //         review: "The floral blend in Blossom Dream is nothing short of perfection. It's soft yet captivating, and I receive compliments every time I wear it."
+    //     },
+    //     {
+    //         id: 3,
+    //         name: "Michael Lee",
+    //         profession: "Perfume Collector",
+    //         companyLogo: "https://i.ibb.co/RYpPHbB/logo1.png",
+    //         companyType: "Real Estate",
+    //         customerImage: "https://i.postimg.cc/VLRzF9H3/cus3.jpg",
+    //         review: "As a collector, I can say the craftsmanship behind Royal Essence is remarkable. The woody notes create a luxurious experience."
+    //     },
+    //     {
+    //         id: 4,
+    //         name: "Sarah Adams",
+    //         profession: "Fashion Editor",
+    //         companyLogo: "https://i.postimg.cc/nhPFJZ7H/fr9-removebg-preview.png",
+    //         companyType: "Advertising Agency",
+    //         customerImage: "https://i.ibb.co/chhfgnV/cus4.jpg",
+    //         review: "Summer Breeze is the perfect fragrance for anyone looking to feel refreshed. Its citrus notes are light yet energizing."
+    //     },
+    //     {
+    //         id: 5,
+    //         name: "David Carter",
+    //         profession: "Tech Entrepreneur",
+    //         companyLogo: "https://i.postimg.cc/Y9KLBtyv/fr1-removebg-preview.png",
+    //         companyType: "Tech Startup",
+    //         customerImage: "https://i.ibb.co/H2N4Xw9/cus5.jpg",
+    //         review: "The unique scent of Midnight Velvet is unforgettable. The boldness of the fragrance gives me confidence every time I wear it."
+    //     },
+    //     {
+    //         id: 6,
+    //         name: "Emily Johnson",
+    //         profession: "Boutique Owner",
+    //         companyLogo: "https://i.postimg.cc/kXHzM5jh/fr6.png",
+    //         companyType: "Retail",
+    //         customerImage: "https://i.ibb.co/7vvHbGf/cus6.jpg",
+    //         review: "Rose Petals is a true masterpiece. The floral notes are perfectly balanced, and it lasts all day without fading."
+    //     },
+    //     {
+    //         id: 7,
+    //         name: "Robert Evans",
+    //         profession: "Hotel Manager",
+    //         companyLogo: "https://i.postimg.cc/LsKWfbFt/fr2.png",
+    //         companyType: "Hospitality",
+    //         customerImage: "https://i.ibb.co/R6y0q5W/cus7.jpg",
+    //         review: "Ocean Mist is my go-to fragrance for summer. It’s refreshing and reminds me of a day spent by the sea."
+    //     },
+    //     {
+    //         id: 8,
+    //         name: "Olivia Wilson",
+    //         profession: "Restaurant Owner",
+    //         companyLogo: "https://i.postimg.cc/Ls3xP4TS/fr3.png",
+    //         companyType: "Hospitality",
+    //         customerImage: "https://i.ibb.co/njfTysy/cus8.jpg",
+    //         review: "Amber Nights has an alluring depth to it. It's perfect for an evening out and leaves a lasting impression."
+    //     },
+    //     {
+    //         id: 9,
+    //         name: "William Harris",
+    //         profession: "Fitness Club Owner",
+    //         companyLogo: "https://i.postimg.cc/k5JpftDG/fr13.png",
+    //         companyType: "Fitness",
+    //         customerImage: "https://i.ibb.co/gJZghTc/cus9.jpg",
+    //         review: "Citrus Rush is a great scent for an active lifestyle. It’s light, fresh, and invigorating, perfect for the gym or outdoor activities."
+    //     },
+    //     {
+    //         id: 10,
+    //         name: "Sophia Martinez",
+    //         profession: "Gallery Curator",
+    //         companyLogo: "https://i.postimg.cc/rmdgPGTV/fr11-removebg-preview.png",
+    //         companyType: "Art Gallery",
+    //         customerImage: "https://i.ibb.co/WgQdwbP/cus10.jpg",
+    //         review: "The artistic blend of notes in Artistry Bloom elevates the experience of wearing perfume to a whole new level. It’s a work of art."
+    //     },
+    //     {
+    //         id: 11,
+    //         name: "James Brown",
+    //         profession: "Café Owner",
+    //         companyLogo: "https://i.postimg.cc/GtwPgZzK/fr7-removebg-preview.png",
+    //         companyType: "Hospitality",
+    //         customerImage: "https://i.ibb.co/ZXS8v9n/cus11.jpg",
+    //         review: "Vanilla Spice adds a warm, comforting aura to my day. Customers frequently ask what fragrance I’m wearing, and I proudly share it."
+    //     },
+    //     {
+    //         id: 12,
+    //         name: "Grace Taylor",
+    //         profession: "Event Planner",
+    //         companyLogo: "https://i.postimg.cc/6qQ9DSw7/logo3-removebg-preview.png",
+    //         companyType: "Event Management",
+    //         customerImage: "https://i.ibb.co/nj7ZGH4/2009.webp",
+    //         review: "Golden Hour has a sophisticated elegance. It’s perfect for formal events, and I always receive compliments when I wear it."
+    //     }
+    // ];
     
     const settings = {
         dots: true,
