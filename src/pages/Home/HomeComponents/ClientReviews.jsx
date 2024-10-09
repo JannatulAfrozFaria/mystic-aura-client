@@ -6,13 +6,23 @@ import { FaQuoteRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 const ClientReviews = () => {
-   
+
+    // const [reviews,setReviews] = useState([])
+    // useEffect(()=>{
+    //     fetch('/Reviews.json')
+    //     .then(res => res.json())
+    //     .then(data => setReviews(data))
+    // },[reviews])
+    
     const [reviews,setReviews] = useState([])
     useEffect(()=>{
-        fetch('/Reviews.json')
+        fetch('http://localhost:5000/reviews')
         .then(res => res.json())
         .then(data => setReviews(data))
     },[reviews])
+
+   
+
     // const customers = [
     //     {
     //         id: 1,
