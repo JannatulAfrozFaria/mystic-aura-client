@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
 
-const BestCard1 = ({perfumeData}) => {
+const BestCard1 = ({perfumeData,imageClass,buttonClass}) => {
     const {image,name,brandName,origin,category, price} = perfumeData;
     return (
         <div>
             <div className='grid grid-cols-5'>
-                <div className='col-span-2'>
-                    <img className='w-full h-[20vh] md:h-[30vh] bestImage' src={image} alt="perfume_image" />
+                <div className='col-span-2 h-full'>
+                    <img className={`w-full h-[20vh] md:h-[30vh] ${imageClass}`} src={image} alt="perfume_image" />
                 </div>
                 <div className='col-span-3 p-4 md:p-6 text-gray-500 roboto '>
                     <h1 className='text-2xl md:text-4xl protest pName'> {name} </h1>
@@ -18,7 +18,7 @@ const BestCard1 = ({perfumeData}) => {
                         <p><span>Category:</span> {category} </p>
                         {/* <p><span>Stock:</span> {perfume.quantity} Units </p> */}
                         <div className='flex gap-1 items-center'> <p className=''>Price:</p>  <span className='bestPrice'> $ {price}</span>  </div>
-                        <button className="py-2 bestSellerButton w-1/4 mt-1 text-xl font-light">
+                        <button className={`py-2 w-1/2 md:w-1/4 mt-1 text-xl font-light  ${buttonClass}`}>
                             <Link to={`/shop/${category.toLowerCase()}`}> Order </Link>
                         </button>
                     </div>

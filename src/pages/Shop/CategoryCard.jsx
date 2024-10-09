@@ -15,7 +15,7 @@ const CategoryCard = ({item}) => {
                         <p><span>Brand:</span> {brandName} </p>
                         <p><span>Origin:</span> {origin} </p>
                         <p><span className=''>Price:</span>  <span className='categoryPrice text-xl tracking-wider font-light'> $ {price}</span></p>
-                        <button className="btn categoryButton w-2/3 mx-auto mt-4 md:mt-2 text-xl font-light">
+                        <button className=" py-3 categoryButton w-2/3 md:w-1/2 mx-auto mt-4 md:mt-2 text-xl font-light">
                             <Link to={'/shop'}> Add to Cart </Link>
                         </button>
                     </div>
