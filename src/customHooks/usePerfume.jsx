@@ -4,7 +4,7 @@ const usePerfume = () => {
     const [perfumes,setPerfumes] = useState([]);
     const [loading,setLoading] = useState(true)
     useEffect(()=>{
-        fetch('/perfumeCollection.json')
+        fetch('http://localhost:5000/perfumes')
         .then(res => res.json())
         .then(data => {
             setPerfumes(data);
