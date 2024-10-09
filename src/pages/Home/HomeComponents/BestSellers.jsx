@@ -21,12 +21,12 @@ const BestSellers = () => {
                             <div className="mt-1 md:mt-3 text-sm md:text-base">
                                 <p><span>Brand:</span> {perfume.brandName} </p>
                                 <p><span>Origin:</span> {perfume.origin} </p>
-                                <p><span>Made for:</span> {perfume.userGroup} </p>
+                                {/* <p><span>Made for:</span> {perfume.userGroup} </p> */}
                                 <p><span>Category:</span> {perfume.category} </p>
                                 {/* <p><span>Stock:</span> {perfume.quantity} Units </p> */}
                                 <div className='flex gap-1 items-center'><p className=''>Price:</p>  <span className='bestPrice'> $ {perfume.price}</span>  </div>
-                                <button className="btn categoryButton w-2/3 mx-auto mt-4 md:mt-2 text-xl font-light">
-                                    <Link to={`/shop/${perfume.category}`}> Order </Link>
+                                <button className="py-2 categoryButton w-1/4 mt-1 text-xl font-light">
+                                    <Link to={`/shop/${perfume.category.toLowerCase()}`}> Order </Link>
                                 </button>
                             </div>
                         </div>

@@ -7,14 +7,14 @@ import { useState } from "react";
 import CategoryTab from "./CategoryTab";
 import { useParams } from "react-router-dom";
 const Categories = () => {
-    const categories = ['woody','floral','citrus','oriental', 'fresh' , 'gourmand', 'spicy' , 'fruity' , 'aquatic', 'chypre' ]
+    const categories = ['floral','woody','citrus','oriental', 'fresh' , 'gourmand', 'spicy' , 'fruity' , 'aquatic', 'chypre' ]
     const {category} = useParams();
+    // console.log(category);
     const initialIndex = categories.indexOf(category);
     const [tabIndex, setTabIndex] = useState(initialIndex);
     const { perfumes} = usePerfume();
-    
-    const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
     const floral = perfumes.filter(item => item.category.toLowerCase() === 'floral');
+    const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
     const citrus = perfumes.filter(item => item.category.toLowerCase() === 'citrus');
     const oriental = perfumes.filter(item => item.category.toLowerCase() === 'oriental');
     const fresh = perfumes.filter(item => item.category.toLowerCase() === 'fresh');
