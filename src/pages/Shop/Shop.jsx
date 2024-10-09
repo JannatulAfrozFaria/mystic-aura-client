@@ -3,30 +3,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import Categories from './Categories';
 import { Helmet } from 'react-helmet-async';
 
-// import Title from "../../UtilityComponents/Title";
-// import usePerfume from "../../customHooks/usePerfume";
-// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import 'react-tabs/style/react-tabs.css';
-// import { useState } from "react";
-// import CategoryTab from "./CategoryTab";
-// import { useParams } from "react-router-dom";
-
 const Shop = () => {
-    // const categories = ['floral', 'woody', 'citrus', 'oriental', 'fresh', 'gourmand', 'spicy', 'fruity', 'aquatic', 'chypre']
-    // const { category } = useParams();
-    // const initialIndex = categories.indexOf(category);
-    // const [tabIndex, setTabIndex] = useState(initialIndex);
-    // const { perfumes } = usePerfume();
-    // const floral = perfumes.filter(item => item.category.toLowerCase() === 'floral');
-    // const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
-    // const citrus = perfumes.filter(item => item.category.toLowerCase() === 'citrus');
-    // const oriental = perfumes.filter(item => item.category.toLowerCase() === 'oriental');
-    // const fresh = perfumes.filter(item => item.category.toLowerCase() === 'fresh');
-    // const Gourmand = perfumes.filter(item => item.category.toLowerCase() === 'gourmand');
-    // const spicy = perfumes.filter(item => item.category.toLowerCase() === 'spicy');
-    // const fruity = perfumes.filter(item => item.category.toLowerCase() === 'fruity');
-    // const aquatic = perfumes.filter(item => item.category.toLowerCase() === 'aquatic');
-    // const chypre = perfumes.filter(item => item.category.toLowerCase() === 'chypre');
 
     return (
         <div>

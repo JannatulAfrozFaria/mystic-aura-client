@@ -9,7 +9,6 @@ import { useParams } from "react-router-dom";
 const Categories = () => {
     const categories = ['floral','woody','citrus','oriental', 'fresh' , 'gourmand', 'spicy' , 'fruity' , 'aquatic', 'chypre' ]
     const {category} = useParams();
-    // console.log(category);
     const initialIndex = categories.indexOf(category);
     const [tabIndex, setTabIndex] = useState(initialIndex);
     const { perfumes} = usePerfume();
