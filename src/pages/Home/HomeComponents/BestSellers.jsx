@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Title from '../../../UtilityComponents/Title';
 // import PefumeData from '/src/perfumes.json';
 import usePerfume from '../../../customHooks/usePerfume';
