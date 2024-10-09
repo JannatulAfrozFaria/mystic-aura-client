@@ -7,9 +7,11 @@ import { useState } from "react";
 import CategoryTab from "./CategoryTab";
 import { useParams } from "react-router-dom";
 const Categories = () => {
+    const categories = ['woody','floral','citrus','oriental', 'fresh' , 'gourmand', 'spicy' , 'fruity' , 'aquatic', 'chypre' ]
+    const {category} = useParams();
     const [tabIndex, setTabIndex] = useState(0);
     const { perfumes} = usePerfume();
-    const {category} = useParams();
+    
     console.log(category);
     const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
     const floral = perfumes.filter(item => item.category.toLowerCase() === 'floral');
