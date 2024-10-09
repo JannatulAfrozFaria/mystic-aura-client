@@ -6,7 +6,7 @@ const NavBar = () => {
         <a href="/" className="navItem">Home</a>
     </li>
     <li className="menu-item">
-        <a href="/shop" className="navItem">Shop</a>
+        <a href="/shop/floral" className="navItem">Shop</a>
     </li>
     <li className="menu-item">
         <a href="/" className="navItem">Blog</a>
