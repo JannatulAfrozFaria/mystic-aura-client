@@ -5,9 +5,11 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { useState } from "react";
 import CategoryTab from "./CategoryTab";
+import { useParams } from "react-router-dom";
 const Categories = () => {
     const [tabIndex, setTabIndex] = useState(0);
-    const { perfumes, loading } = usePerfume();
+    const { perfumes} = usePerfume();
+    const {category} = useParams();
     const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
     const floral = perfumes.filter(item => item.category.toLowerCase() === 'floral');
     const citrus = perfumes.filter(item => item.category.toLowerCase() === 'citrus');
