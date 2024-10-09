@@ -4,9 +4,8 @@ import Title from '../../../UtilityComponents/Title';
 import usePerfume from '../../../customHooks/usePerfume';
 
 const BestSellers = () => {
-    const { perfumes, loading } = usePerfume();
+    const { perfumes} = usePerfume();
     // const perfumes = PefumeData.perfumes;
-    const {category} = useParams();
     return (
         <div className='my-12 md:my-20'>
             <Title heading={'Best Sellers'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}
@@ -27,7 +26,7 @@ const BestSellers = () => {
                                 {/* <p><span>Stock:</span> {perfume.quantity} Units </p> */}
                                 <div className='flex gap-1 items-center'><p className=''>Price:</p>  <span className='bestPrice'> $ {perfume.price}</span>  </div>
                                 <button className="btn categoryButton w-2/3 mx-auto mt-4 md:mt-2 text-xl font-light">
-                                    <Link to={`/shop/${category}`}> Order </Link>
+                                    <Link to={`/shop/${perfume.category}`}> Order </Link>
                                 </button>
                             </div>
                         </div>

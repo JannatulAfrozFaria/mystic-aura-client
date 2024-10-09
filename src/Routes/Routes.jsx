@@ -15,7 +15,7 @@ import Shop from "../pages/Shop/Shop";
             element: <Home></Home> ,
         },
         {
-            path: '/shop',
+            path: '/shop/:category',
             element: <Shop></Shop> ,
         },
       ]
