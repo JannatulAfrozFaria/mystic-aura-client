@@ -9,10 +9,10 @@ import { useParams } from "react-router-dom";
 const Categories = () => {
     const categories = ['woody','floral','citrus','oriental', 'fresh' , 'gourmand', 'spicy' , 'fruity' , 'aquatic', 'chypre' ]
     const {category} = useParams();
-    const [tabIndex, setTabIndex] = useState(0);
+    const initialIndex = categories.indexOf(category);
+    const [tabIndex, setTabIndex] = useState(initialIndex);
     const { perfumes} = usePerfume();
     
-    console.log(category);
     const woody = perfumes.filter(item => item.category.toLowerCase() === 'woody');
     const floral = perfumes.filter(item => item.category.toLowerCase() === 'floral');
     const citrus = perfumes.filter(item => item.category.toLowerCase() === 'citrus');
