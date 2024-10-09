@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Title from '../../../UtilityComponents/Title';
 // import PefumeData from '/src/perfumes.json';
 import usePerfume from '../../../customHooks/usePerfume';
@@ -12,13 +12,13 @@ const BestSellers = () => {
         <div className='my-12 md:my-20'>
             <Title heading={'Best Sellers'} image={'https://i.postimg.cc/6p4mvJsB/logo-p2.png'} imageClass={'border-2 rounded-full border-[#d282afbc]'}
                 description={"Explore our collection of top-rated fragrances that captivate customers worldwide. From timeless classics to modern scents, these perfumes are loved for their unique blends, long-lasting essence, and luxurious appeal."}></Title>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-5/6 mx-auto md:w-full ">
+            < div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-5/6 mx-auto md:w-full ">
                 {perfumes.slice(40, 42).map((perfume) =>
 
                     <BestCard1 key={perfume.id} perfumeData={perfume} ></BestCard1>
                 )}
 
-                {perfumes.slice(28, 30).map((perfume) =>
+                { perfumes.slice(28, 30).map((perfume) =>
                     // <div key={perfume.id} className='grid grid-cols-5'>
                     //     <div className='col-span-2'>
                     //         <img className='w-full h-[20vh] md:h-[30vh] bestImage1' src={perfume.image} alt="perfume_image" />
@@ -35,7 +35,7 @@ const BestSellers = () => {
                     //         </div>
                     //     </div>
                     // </div>
-                    <BestCard2 key={perfume.id} perfumeData={perfume} ></BestCard2>
+                    < BestCard2 key={perfume.id} perfumeData={perfume} ></BestCard2>
                 )}
 
                 {perfumes.slice(32, 34).map((perfume) =>

@@ -18,7 +18,7 @@ const BestCard2 = ({perfumeData}) => {
                         <p><span>Category:</span> {category} </p>
                         {/* <p><span>Stock:</span> {perfume.quantity} Units </p> */}
                         <div className='flex gap-1 items-center'> <p className=''>Price:</p>  <span className='bestPrice'> $ {price}</span>  </div>
-                        <button className="py-2 bestSellerButton w-1/4 mt-1 text-xl font-light">
+                        <button className="py-2 bestSellerButton2 w-1/4 mt-1 text-xl font-light">
                             <Link to={`/shop/${category.toLowerCase()}`}> Order </Link>
                         </button>
                     </div>
