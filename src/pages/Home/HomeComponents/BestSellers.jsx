@@ -1,9 +1,11 @@
 import { Link, useParams } from 'react-router-dom';
 import Title from '../../../UtilityComponents/Title';
 import PefumeData from '/src/perfumes.json'
+import usePerfume from '../../../customHooks/usePerfume';
 
 const BestSellers = () => {
-    const perfumes = PefumeData.perfumes;
+    const { perfumes, loading } = usePerfume();
+    // const perfumes = PefumeData.perfumes;
     const {category} = useParams();
     return (
         <div className='my-12 md:my-20'>
@@ -25,7 +27,7 @@ const BestSellers = () => {
                                 {/* <p><span>Stock:</span> {perfume.quantity} Units </p> */}
                                 <div className='flex gap-1 items-center'><p className=''>Price:</p>  <span className='bestPrice'> $ {perfume.price}</span>  </div>
                                 <button className="btn categoryButton w-2/3 mx-auto mt-4 md:mt-2 text-xl font-light">
-                                    <Link to={`/shop/${category}`}> Add to Cart </Link>
+                                    <Link to={`/shop/${category}`}> Order </Link>
                                 </button>
                             </div>
                         </div>
