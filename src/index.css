@@ -179,4 +179,26 @@
   color: #c97ca9;
   border: 2px solid #c97ca9;
 }
+.custom-bullet {
+  background-color: #FBCFE8;
+  padding: 10px 15px; 
+  border-radius: 50%;
+  margin: 0 5px; 
+  /* color: #c97ca9; 
+  font-weight: bold;
+  font-size: 16px;  */
+  width: 40px; 
+  height: 40px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-bullet.swiper-pagination-bullet-active {
+  background-color: #c97ca9;
+  color: #fff;
+}
+
   

@@ -13,16 +13,17 @@ const CategoryTab = ({ items }) => {
     const pagination = {
         clickable: true,
         renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
+            // return `<span class="${className} custom-bullet">${index + 1}</span>`; 
+            return `<span class="${className} custom-bullet"></span>`; 
         },
     };
 
     return (
         <div>
-            <div className="w-5/6 mx-auto md:w-full">
+            <div className="w-5/6 mx-auto md:w-full mb-12 md:mb-32">
                 {items.length <= itemsPerPage ? (
                     // If items are less than or equal to 6, render without pagination
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16 mt-10 md:mt-16 mb-12 md:mb-32">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16 mt-10 md:mt-16">
                         {items.map((perfume) => (
                             <CategoryCard key={perfume.id} item={perfume} />
                         ))}
@@ -36,7 +37,7 @@ const CategoryTab = ({ items }) => {
                     >
                         {[...Array(pageCount)].map((_, pageIndex) => (
                             <SwiperSlide key={pageIndex}>
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16 mt-10 md:mt-16 mb-12 md:mb-32">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16 mt-10 md:mt-16 mb-12">
                                     {items
                                         .slice(pageIndex * itemsPerPage, (pageIndex + 1) * itemsPerPage)
                                         .map((perfume) => (
