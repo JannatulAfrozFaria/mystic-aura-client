@@ -77,24 +77,11 @@
 .bestSellerButton{
   background-color: #c97ca9;
   color: white;
-  border: 0px solid transparent;
-  border-radius: 50% 0% 50% 0%;
+  border: 2px solid transparent;
+  border-radius: 40% 0% 40% 0%;
   font-family: "Protest Strike", sans-serif;
 }
 .bestSellerButton:hover{
-  background-color: #FBCFE8;
-  color: #c97ca9;
-  border: 2px solid #c97ca9;
-}
-.bestSellerPrice2{
-  background-color: #c97ca9;
-  color: white;
-  border: 0px solid transparent;
-  border-radius: 0% 50% 0% 50%;
-  font-family: "Protest Strike", sans-serif;
-  /* padding: 0% 5%; */
-}
-.bestSellerPrice2:hover{
   background-color: #FBCFE8;
   color: #c97ca9;
   border: 2px solid #c97ca9;
@@ -168,7 +155,7 @@
 .categoryButton{
   background-color: #c97ca9;
   color: white;
-  border: 0px solid transparent;
+  border: 2px solid transparent;
   border-radius: 0% 50% 0% 50%;
   font-family: "Protest Strike", sans-serif;
   /* padding: 0% 5%; */
