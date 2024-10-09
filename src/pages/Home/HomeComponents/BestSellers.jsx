@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Title from '../../../UtilityComponents/Title';
 // import PefumeData from '/src/perfumes.json';
 import usePerfume from '../../../customHooks/usePerfume';
+import BestCard1 from '../Cards/BestCard1';
 
 const BestSellers = () => {
     const { perfumes} = usePerfume();
@@ -12,25 +13,26 @@ const BestSellers = () => {
                 description={"Explore our collection of top-rated fragrances that captivate customers worldwide. From timeless classics to modern scents, these perfumes are loved for their unique blends, long-lasting essence, and luxurious appeal."}></Title>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-5/6 mx-auto md:w-full ">
                 {perfumes.slice(40, 42).map((perfume) =>
-                    <div key={perfume.id} className='grid grid-cols-5'>
-                        <div className='col-span-2'>
-                            <img className='w-full h-[20vh] md:h-[30vh] bestImage' src={perfume.image} alt="perfume_image" />
-                        </div>
-                        <div className='col-span-3 p-4 md:p-6 text-gray-500 roboto '>
-                            <h1 className='text-2xl md:text-4xl protest pName'> {perfume.name} </h1>
-                            <div className="mt-1 md:mt-3 text-sm md:text-base">
-                                <p><span>Brand:</span> {perfume.brandName} </p>
-                                <p><span>Origin:</span> {perfume.origin} </p>
-                                {/* <p><span>Made for:</span> {perfume.userGroup} </p> */}
-                                <p><span>Category:</span> {perfume.category} </p>
-                                {/* <p><span>Stock:</span> {perfume.quantity} Units </p> */}
-                                <div className='flex gap-1 items-center'><p className=''>Price:</p>  <span className='bestPrice'> $ {perfume.price}</span>  </div>
-                                <button className="py-2 bestSellerButton w-1/4 mt-1 text-xl font-light">
-                                    <Link to={`/shop/${perfume.category.toLowerCase()}`}> Order </Link>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    // <div key={perfume.id} className='grid grid-cols-5'>
+                    //     <div className='col-span-2'>
+                    //         <img className='w-full h-[20vh] md:h-[30vh] bestImage' src={perfume.image} alt="perfume_image" />
+                    //     </div>
+                    //     <div className='col-span-3 p-4 md:p-6 text-gray-500 roboto '>
+                    //         <h1 className='text-2xl md:text-4xl protest pName'> {perfume.name} </h1>
+                    //         <div className="mt-1 md:mt-3 text-sm md:text-base">
+                    //             <p><span>Brand:</span> {perfume.brandName} </p>
+                    //             <p><span>Origin:</span> {perfume.origin} </p>
+                    //             {/* <p><span>Made for:</span> {perfume.userGroup} </p> */}
+                    //             <p><span>Category:</span> {perfume.category} </p>
+                    //             {/* <p><span>Stock:</span> {perfume.quantity} Units </p> */}
+                    //             <div className='flex gap-1 items-center'><p className=''>Price:</p>  <span className='bestPrice'> $ {perfume.price}</span>  </div>
+                    //             <button className="py-2 bestSellerButton w-1/4 mt-1 text-xl font-light">
+                    //                 <Link to={`/shop/${perfume.category.toLowerCase()}`}> Order </Link>
+                    //             </button>
+                    //         </div>
+                    //     </div>
+                    // </div>
+                    <BestCard1 key={perfume.id} perfumeData={perfume} ></BestCard1>
                 )}
                 {perfumes.slice(28, 30).map((perfume) =>
                     <div key={perfume.id} className='grid grid-cols-5'>

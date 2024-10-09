@@ -1,6 +1,6 @@
 
 
-const BestCard1 = () => {
+const BestCard1 = ({perfumeData}) => {
     return (
         <div>
             <div key={perfume.id} className='grid grid-cols-5'>
