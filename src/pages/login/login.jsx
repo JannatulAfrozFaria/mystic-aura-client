@@ -1,5 +1,5 @@
-
-
+import { AiFillGoogleCircle } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa6";
 const Login = () => {
     return (
         <div>
@@ -21,7 +21,10 @@ const Login = () => {
                             </div>
                             <div>
                                 <div>
-                                    
+                                    <AiFillGoogleCircle />
+                                </div>
+                                <div>
+                                    <FaGithub />
                                 </div>
                             </div>
                         </div>
