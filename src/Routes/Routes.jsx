@@ -23,6 +23,10 @@ import Login from "../pages/login/login";
             path: '/login',
             element: <Login></Login>,
         },
+        {
+            path: '/signUp',
+            element: <Login></Login>,
+        },
       ]
     },
   ]);
