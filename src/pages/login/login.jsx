@@ -1,7 +1,13 @@
+import { useEffect, useRef, useState } from "react";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa6";
-
+import { loadCaptchaEnginge, LoadCanvasTemplate,  validateCaptcha } from 'react-simple-captcha';
 const Login = () => {
+    const captchaRef = useRef(null);
+    const [disabled,setDisabled] = useState(true);
+    useEffect(()=>{
+        loadCaptchaEnginge(6); 
+    },[])
     const handleLogin =(event)=>{
         event.preventDefault();
         const form = event.target;
@@ -9,8 +15,20 @@ const Login = () => {
         const password = form.password.value;
         console.log(email,password);
     }
+    const handleValidateCaptcha = () =>{
+        const user_captcha_value =  captchaRef.current.value;
+        if (validateCaptcha(user_captcha_value)==true) {
+            // alert('Captcha Matched');
+            setDisabled(false);
+        }
+        else {
+            alert('Captcha Does Not Match');
+            setDisabled(true);
+        }
+    }
+
     return (
-        <div className="my-12 md:my-24 py-0 md:py-12 flex items-center justify-center">
+        <div className="h-[75vh] md:my-24  flex items-center justify-center">
             <div className="w-3/4 mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full">
                     {/* TEXT SECTION */}
@@ -32,12 +50,14 @@ const Login = () => {
                             </div>
                         </div>
                         <form onSubmit={handleLogin} >
+                            {/* EMAIL------ */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                             </div>
+                            {/* PASS---WORD---- */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
@@ -47,8 +67,16 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
+                            {/* CAPTCHA---------- */}
+                            <div className="form-control">
+                                <label className="label">
+                                    <LoadCanvasTemplate />
+                                </label>
+                                <input ref={captchaRef} type="text" name="captcha" placeholder="Type the captcha above" className="input input-bordered" required />
+                                <button onClick ={handleValidateCaptcha} className="btn btn-outline btn-xs  text-#8f2462 hover:bg-[#8f2462] hover:text-white mt-4">Validate</button>
+                            </div>
                             <div className="form-control mt-6">
-                                <input className="btn  bg-black text-basic hover:bg-[#c97ca9] hover:text-white text-xl" type="submit" value="Login" />
+                                <input disabled={disabled} className="btn  bg-black text-basic hover:bg-[#c97ca9] hover:text-white text-xl" type="submit" value="Login" />
                             </div>
                         </form>
                     </div>
