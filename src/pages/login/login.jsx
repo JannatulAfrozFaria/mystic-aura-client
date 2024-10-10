@@ -5,7 +5,7 @@ const Login = () => {
         <div>
             <div className="hero bg-base-200 min-h-screen">
                 <div className=" bg-black text-basic hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center">
+                    <div className="text-center w-3/4 mx-auto">
                         <h1 className="text-5xl font-bold">Login to <span className="protest" >Mystic <span>Aura !</span></span></h1>
                         <p className="py-6">
                             Don't have an account?
