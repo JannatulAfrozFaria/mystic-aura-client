@@ -5,13 +5,13 @@ const Login = () => {
         <div>
             <div className="hero bg-base-200 min-h-screen">
                 <div className=" bg-black text-basic hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
+                    <div className="text-center">
                         <h1 className="text-5xl font-bold">Login to <span>Mystic <span>Aura !</span></span></h1>
                         <p className="py-6">
                             Don't have an account?
                         </p>
                         <div className="form-control mt-6">
-                            <button className="btn categoryButton tracking-wider font-light text-xl">Sign Up</button>
+                            <button className="btn btn-outline tracking-wider font-light text-xl">Sign Up</button>
                         </div>
                     </div>
                     <div className="card bg-[#FBCFE8] w-full max-w-sm shrink-0 shadow-2xl">
