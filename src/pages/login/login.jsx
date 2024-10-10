@@ -14,12 +14,12 @@ const Login = () => {
                             <button className="btn btn-outline tracking-wider font-light text-xl">Sign Up</button>
                         </div>
                     </div>
-                    <div className="card bg-[#FBCFE8] w-full max-w-sm shrink-0 shadow-2xl">
+                    <div className="card bg-[#FBCFE8] text-dark w-full max-w-sm shrink-0 shadow-2xl">
                         <div className="flex justify-between">
                             <div>
                                 <h1>Login</h1>
                             </div>
-                            <div>
+                            <div className="flex gap-2">
                                 <div>
                                     <AiFillGoogleCircle />
                                 </div>
