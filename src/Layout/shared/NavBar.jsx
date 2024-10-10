@@ -46,7 +46,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a href="/login" className="btn btn-basic btn-sm">Login</a>
+                    <a href="/login" className="btn btn-basic btn-sm ">Login</a>
                 </div>
             </div>
         </div>
