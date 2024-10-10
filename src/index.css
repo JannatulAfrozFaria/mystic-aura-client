@@ -118,6 +118,11 @@
     color:black;
     outline-color: #FBCFE8;
 }
+.btn-basic:hover{
+    background-color:black;
+    color:#FBCFE8;
+    border: 2px solid #FBCFE8;
+}
 .box{
   border: 2px solid #FBCFE8;
   /* border-bottom: 2px solid #FBCFE8;
