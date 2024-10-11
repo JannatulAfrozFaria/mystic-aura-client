@@ -36,6 +36,7 @@ const SignUp = () => {
                                     <span className="label-text">Name</span>
                                 </label>
                                 <input type="text" {...register("name")}  name="name" placeholder="Name" className="input input-bordered" required />
+                                {errors.name && <span className="text-dark" >This field is required</span>}
                             </div>
                             {/* EMAIL------ */}
                             <div className="form-control">
@@ -43,17 +44,15 @@ const SignUp = () => {
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="email" {...register("email", { required: true })}  name="email" placeholder="email" className="input input-bordered" required />
+                                {errors.email && <span className="text-dark" >This field is required</span>}
                             </div>
                             {/* PASS---WORD---- */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" {...register("password", { required: true })}  name="password" placeholder="password" className="input input-bordered" required />
-                                {errors.password && <span>This field is required</span>}
-                                {/* <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label> */}
+                                <input type="password" {...register("password", { required: true })}  name="password"  placeholder="password" className="input input-bordered" required />
+                                {errors.password && <span className="text-dark" >This field is required</span>}
                             </div>
                             <div className="form-control mt-6">
                                 <input  className="btn  bg-black text-basic hover:bg-[#c97ca9] hover:text-white text-xl" type="submit" value="Sign Up" />
