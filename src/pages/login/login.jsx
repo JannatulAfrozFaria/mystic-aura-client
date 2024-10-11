@@ -43,7 +43,7 @@ const Login = () => {
                     <div className=" text-center bg-black p-8 md:p-0 flex flex-col justify-center h-full flex-grow text-basic ">
                         <h1 className="text-5xl font-bold  ">Login to <br /> </h1>
                         <h1 className=" text-5xl protest mt-4 text-[#c97ca9]">Mystic Aura!</h1>
-                        <p className="py-6 ">Don&apos;t have an account?</p>
+                        <p className="py-6 ">New here? Create an account!</p>
                         <div className="form-control w-1/2 md:w-1/3 mx-auto ">
                             <button className="btn text-xl text-white btn-basic">
                                  <Link to='/signUp'> Sign Up</Link>

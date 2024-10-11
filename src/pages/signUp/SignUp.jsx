@@ -1,6 +1,9 @@
+import { useForm } from "react-hook-form";
 
 
 const SignUp = () => {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const onSubmit = data => console.log(data);
     return (
         <div className="h-[75vh] md:my-24  flex items-center justify-center">
             <div className="w-3/4 mx-auto">
@@ -9,9 +12,9 @@ const SignUp = () => {
                     <div className=" text-center bg-black p-8 md:p-0 flex flex-col justify-center h-full flex-grow text-basic ">
                         <h1 className="text-5xl font-bold  ">Login to <br /> </h1>
                         <h1 className=" text-5xl protest mt-4 text-[#c97ca9]">Mystic Aura!</h1>
-                        <p className="py-6 ">Don&apos;t have an account?</p>
+                        <p className="py-6 ">Already have an account?</p>
                         <div className="form-control w-1/2 md:w-1/3 mx-auto ">
-                            <button className="btn text-xl text-white btn-basic">Sign Up</button>
+                            <button className="btn text-xl text-white btn-basic">Login</button>
                         </div>
                     </div>
                     {/* FORM SECTION */}
