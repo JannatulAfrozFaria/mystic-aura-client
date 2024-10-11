@@ -1,10 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa6";
 import { loadCaptchaEnginge, LoadCanvasTemplate,  validateCaptcha } from 'react-simple-captcha';
+import { AuthContext } from "../../providers/AuthProvider";
 const Login = () => {
     const captchaRef = useRef(null);
     const [disabled,setDisabled] = useState(true);
+    const { login,logOut} = useContext(AuthContext);
     useEffect(()=>{
         loadCaptchaEnginge(6); 
     },[])
