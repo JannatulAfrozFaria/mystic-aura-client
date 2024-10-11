@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
@@ -79,7 +80,6 @@ const SignUp = () => {
                 </div>
             </div>
         </div>
-
     );
 };
 
