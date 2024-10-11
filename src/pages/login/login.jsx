@@ -46,7 +46,7 @@ const Login = () => {
                         <p className="py-6 ">New here? Create an account!</p>
                         <div className="form-control w-1/2 md:w-1/3 mx-auto ">
                             <button className="btn text-xl text-white btn-basic">
-                                 <Link to='/signUp'> Sign Up</Link>
+                                 <Link to={'/signUp'}> Sign Up </Link>
                             </button>
                         </div>
                     </div>
@@ -74,9 +74,10 @@ const Login = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-                                <label className="label">
+                                
+                                {/* <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
+                                </label> */}
                             </div>
                             {/* CAPTCHA---------- */}
                             <div className="form-control">
