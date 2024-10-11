@@ -20,11 +20,11 @@ const SignUp = () => {
                         <div className="flex justify-between">
                             <h1 className="text-2xl font-medium">Login</h1>
                             <div className="flex gap-2 text-3xl">
-                                <AiFillGoogleCircle />
-                                <FaGithub />
+                                {/* <AiFillGoogleCircle />
+                                <FaGithub /> */}
                             </div>
                         </div>
-                        <form onSubmit={handleLogin} >
+                        <form onSubmit={handleSignUp} >
                             {/* EMAIL------ */}
                             <div className="form-control">
                                 <label className="label">

@@ -3,6 +3,7 @@ import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa6";
 import { loadCaptchaEnginge, LoadCanvasTemplate,  validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from "../../providers/AuthProvider";
+import { Link } from "react-router-dom";
 const Login = () => {
     const captchaRef = useRef(null);
     const [disabled,setDisabled] = useState(true);
@@ -44,7 +45,9 @@ const Login = () => {
                         <h1 className=" text-5xl protest mt-4 text-[#c97ca9]">Mystic Aura!</h1>
                         <p className="py-6 ">Don&apos;t have an account?</p>
                         <div className="form-control w-1/2 md:w-1/3 mx-auto ">
-                            <button className="btn text-xl text-white btn-basic">Sign Up</button>
+                            <button className="btn text-xl text-white btn-basic">
+                                 <Link to='/signUp'> Sign Up</Link>
+                            </button>
                         </div>
                     </div>
                     {/* FORM SECTION */}
