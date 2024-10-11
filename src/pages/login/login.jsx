@@ -42,6 +42,7 @@ const Login = () => {
                     </div>
                     {/* FORM SECTION */}
                     <div className="w-full bg-[#FBCFE8] p-8 md:p-12 h-full flex flex-col justify-center flex-grow">
+                        {/* SOCIAL-----LOGIN---- */}
                         <div className="flex justify-between">
                             <h1 className="text-2xl font-medium">Login</h1>
                             <div className="flex gap-2 text-3xl">
