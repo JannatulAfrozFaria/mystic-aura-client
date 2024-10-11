@@ -11,7 +11,7 @@ const SignUp = () => {
     return (
         <div>
             <Helmet>
-                <title>Mystic Aura | Login</title>
+                <title>Mystic Aura | Sign Up</title>
             </Helmet>
             <div className="h-[75vh] md:my-24  flex items-center justify-center">
                 <div className="w-3/4 mx-auto">
