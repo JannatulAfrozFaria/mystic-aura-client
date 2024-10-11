@@ -3,7 +3,9 @@ import { useForm } from "react-hook-form";
 
 const SignUp = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data)
+    };
     return (
         <div className="h-[75vh] md:my-24  flex items-center justify-center">
             <div className="w-3/4 mx-auto">
@@ -21,45 +23,37 @@ const SignUp = () => {
                     <div className="w-full bg-[#FBCFE8] p-8 md:p-12 h-full flex flex-col justify-center flex-grow">
                         {/* SOCIAL-----LOGIN---- */}
                         <div className="flex justify-between">
-                            <h1 className="text-2xl font-medium">Login</h1>
+                            <h1 className="text-2xl font-medium">Sign Up</h1>
                             <div className="flex gap-2 text-3xl">
                                 {/* <AiFillGoogleCircle />
                                 <FaGithub /> */}
                             </div>
                         </div>
-                        <form onSubmit={handleSignUp} >
+                        <form onSubmit={handleSubmit(onSubmit)} >
                             {/* NAME------ */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+                                <input type="text" {...register("name")}  name="name" placeholder="Name" className="input input-bordered" required />
                             </div>
                             {/* EMAIL------ */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                                <input type="email" {...register("email")}  name="email" placeholder="email" className="input input-bordered" required />
                             </div>
                             {/* PASS---WORD---- */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                                <input type="password" {...register("password")}  name="password" placeholder="password" className="input input-bordered" required />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            {/* CAPTCHA---------- */}
-                            {/* <div className="form-control">
-                                <label className="label">
-                                    <LoadCanvasTemplate />
-                                </label>
-                                <input ref={captchaRef} type="text" name="captcha" placeholder="Type the captcha above" className="input input-bordered" required />
-                                <button onClick ={handleValidateCaptcha} className="btn btn-outline btn-xs  text-#8f2462 hover:bg-[#8f2462] hover:text-white mt-4">Validate</button>
-                            </div> */}
                             <div className="form-control mt-6">
                                 <input disabled={disabled} className="btn  bg-black text-basic hover:bg-[#c97ca9] hover:text-white text-xl" type="submit" value="Sign Up" />
                             </div>
