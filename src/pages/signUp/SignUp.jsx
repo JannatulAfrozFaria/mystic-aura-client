@@ -25,6 +25,13 @@ const SignUp = () => {
                             </div>
                         </div>
                         <form onSubmit={handleSignUp} >
+                            {/* NAME------ */}
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+                            </div>
                             {/* EMAIL------ */}
                             <div className="form-control">
                                 <label className="label">
@@ -43,15 +50,15 @@ const SignUp = () => {
                                 </label>
                             </div>
                             {/* CAPTCHA---------- */}
-                            <div className="form-control">
+                            {/* <div className="form-control">
                                 <label className="label">
                                     <LoadCanvasTemplate />
                                 </label>
                                 <input ref={captchaRef} type="text" name="captcha" placeholder="Type the captcha above" className="input input-bordered" required />
                                 <button onClick ={handleValidateCaptcha} className="btn btn-outline btn-xs  text-#8f2462 hover:bg-[#8f2462] hover:text-white mt-4">Validate</button>
-                            </div>
+                            </div> */}
                             <div className="form-control mt-6">
-                                <input disabled={disabled} className="btn  bg-black text-basic hover:bg-[#c97ca9] hover:text-white text-xl" type="submit" value="Login" />
+                                <input disabled={disabled} className="btn  bg-black text-basic hover:bg-[#c97ca9] hover:text-white text-xl" type="submit" value="Sign Up" />
                             </div>
                         </form>
                     </div>

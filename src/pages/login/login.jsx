@@ -61,13 +61,6 @@ const Login = () => {
                             </div>
                         </div>
                         <form onSubmit={handleLogin} >
-                            {/* NAME------ */}
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Name</span>
-                                </label>
-                                <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
-                            </div>
                             {/* EMAIL------ */}
                             <div className="form-control">
                                 <label className="label">
