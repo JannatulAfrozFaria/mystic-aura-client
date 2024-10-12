@@ -20,6 +20,13 @@ const NavBar = () => {
         logOut()
         .then(()=>{})
         .catch((error) => console.log(error))
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Logged out successfully!",
+            showConfirmButton: false,
+            timer: 1500
+          });
     }
     return (
         <div>
