@@ -22,6 +22,13 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Logged In successfully!",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
             })
     }
     const handleValidateCaptcha = () => {
