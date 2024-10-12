@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet-async";
 const Login = () => {
     const captchaRef = useRef(null);
     const [disabled, setDisabled] = useState(true);
-    const { login, logOut } = useContext(AuthContext);
+    const { login } = useContext(AuthContext);
     useEffect(() => {
         loadCaptchaEnginge(6);
     }, [])

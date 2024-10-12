@@ -1,12 +1,20 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const SignUp = () => {
+    const { createUser } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data)
+        console.log(data);
+        createUser(data.email, data.password)
+        .then(result=>{
+            const loggedUser = result.user;
+            console.log(loggedUser);
+        })
     };
     return (
         <div>
@@ -63,7 +71,7 @@ const SignUp = () => {
                                         required: true,
                                         minLength: 6,
                                         maxLength: 20,
-                                        pattern: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8}$/
+                                        pattern: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{6}$/
                                     })}
                                         name="password" placeholder="password" className="input input-bordered" />
                                     {errors.password?.type === 'required' && <span className="text-dark2 font-md font-semibold" >Password is required</span>}
