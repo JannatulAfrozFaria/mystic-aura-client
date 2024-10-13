@@ -19,7 +19,10 @@ import PrivateRoute from "./PrivateRoute";
         },
         {
             path: '/shop/:category',
-            element: <PrivateRoute><Shop></Shop></PrivateRoute> ,
+            // element: <Shop></Shop>,
+            element: <PrivateRoute>
+                       <Shop></Shop>
+                    </PrivateRoute> ,
         },
         {
             path: '/login',
