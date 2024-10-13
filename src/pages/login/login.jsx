@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa6";
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet-async";
 import Swal from 'sweetalert2';
 
 const Login = () => {
-    const captchaRef = useRef(null);
+    // const captchaRef = useRef(null);
     const [disabled, setDisabled] = useState(true);
     const { login } = useContext(AuthContext);
     useEffect(() => {
@@ -33,8 +33,9 @@ const Login = () => {
                   });
             })
     }
-    const handleValidateCaptcha = () => {
-        const user_captcha_value = captchaRef.current.value;
+    const handleValidateCaptcha = (e) => {
+        // const user_captcha_value = captchaRef.current.value;
+        const user_captcha_value = e.target.value;
         if (validateCaptcha(user_captcha_value) == true) {
             // alert('Captcha Matched');
             setDisabled(false);
@@ -97,8 +98,11 @@ const Login = () => {
                                     <label className="label">
                                         <LoadCanvasTemplate />
                                     </label>
-                                    <input ref={captchaRef} type="text" name="captcha" placeholder="Type the captcha above" className="input input-bordered" required />
-                                    <button onClick={handleValidateCaptcha} className="btn btn-outline btn-xs  text-#8f2462 hover:bg-[#8f2462] hover:text-white mt-4">Validate</button>
+                                    <input onBlur={handleValidateCaptcha}  
+                                    // ref={captchaRef} 
+                                    type="text" name="captcha" placeholder="Type the captcha above" className="input input-bordered" required />
+                                    {/* <button onClick={handleValidateCaptcha}
+                                     className="btn btn-outline btn-xs  text-#8f2462 hover:bg-[#8f2462] hover:text-white mt-4">Validate</button> */}
                                 </div>
                                 <div className="form-control mt-6">
                                     <input disabled={disabled} className="btn  bg-black text-basic hover:bg-[#c97ca9] hover:text-white text-xl" type="submit" value="Login" />
