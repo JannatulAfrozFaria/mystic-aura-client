@@ -12,7 +12,7 @@ const Login = () => {
     const [disabled, setDisabled] = useState(true);
     const { login } = useContext(AuthContext);
     const navigate = useNavigate();
-    const loaction = useLocation();
+    const location = useLocation();
     const from = location.state?.from?.pathname || "/" ;
     useEffect(() => {
         loadCaptchaEnginge(6);
