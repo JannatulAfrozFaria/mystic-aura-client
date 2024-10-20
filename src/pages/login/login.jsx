@@ -99,7 +99,7 @@ const Login = () => {
                                     <div className="relative">
                                         <input type={showPassword? "text" : "password"} 
                                         name="password" placeholder="password" className="input input-bordered" required />
-                                        <span className="absolute" onClick={()=> setShowPassword(!showPassword)} > {showPassword ? <FaEyeSlash /> : <FaEye /> }  </span>
+                                        <span className="absolute top-4 right-4 " onClick={()=> setShowPassword(!showPassword)} > {showPassword ? <FaEyeSlash /> : <FaEye /> }  </span>
                                         </div>
                                     {/* <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
