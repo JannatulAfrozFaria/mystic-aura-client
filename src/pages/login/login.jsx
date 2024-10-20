@@ -1,6 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import { AiFillGoogleCircle } from "react-icons/ai";
-import { FaGithub } from "react-icons/fa6";
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -8,13 +6,14 @@ import { Helmet } from "react-helmet-async";
 import Swal from 'sweetalert2';
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import SocialLogin from "../../Components/SocialLogin";
 
 const Login = () => {
     // const captchaRef = useRef(null);
     const [disabled, setDisabled] = useState(true);
     //state for password toggle
     const [showPassword,setShowPassword] = useState(false);
-    const { login ,signInWithGoogle,signInWithGitHub } = useContext(AuthContext);
+    const { login } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/" ;
@@ -41,26 +40,7 @@ const Login = () => {
                   navigate(from,{replace:true});
             })
     }
-    // GOOGLE------GITHUB----SIGN---IN
-    const handleGoogleSignIn =()=>{
-        signInWithGoogle()
-        .then(result=>{
-            console.log(result.user)
-        })
-        .catch(error=>{
-            console.error(error)
-        })
-    }
-
-    const handleGitHubSignIn = () =>{
-        signInWithGitHub()
-        .then(result=>{
-            console.log(result.user)
-        })
-        .catch(error=>{
-            console.error(error)
-        })
-    }
+    
     const handleValidateCaptcha = (e) => {
         // const user_captcha_value = captchaRef.current.value;
         const user_captcha_value = e.target.value;
@@ -98,11 +78,11 @@ const Login = () => {
                             {/* SOCIAL-----LOGIN---- */}
                             <div className="flex justify-between">
                                 <h1 className="text-2xl font-medium">Login</h1>
-                                <div className="flex gap-2 text-3xl">
+                                {/* <div className="flex gap-2 text-3xl">
                                     <span onClick={handleGoogleSignIn}> <AiFillGoogleCircle /></span> 
                                     <span onClick={handleGitHubSignIn}>  <FaGithub /></span> 
-                                   
-                                </div>
+                                </div> */}
+                                <SocialLogin></SocialLogin>
                             </div>
                             <form onSubmit={handleLogin} >
                                 {/* EMAIL------ */}
