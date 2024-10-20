@@ -118,7 +118,11 @@ const Login = () => {
                                      className="btn btn-outline btn-xs  text-#8f2462 hover:bg-[#8f2462] hover:text-white mt-4">Validate</button> */}
                                 </div>
                                 <div className="form-control mt-6">
-                                    <input disabled={disabled} className="btn  bg-black text-basic hover:bg-[#c97ca9] hover:text-white text-xl" type="submit" value="Login" />
+                                    <input disabled={false} className="btn  bg-black text-basic hover:bg-[#c97ca9] hover:text-white text-xl" type="submit" value="Login" />
+
+                                    {/* ACTIVATE RECAPTCHA-------add "disabled" in disabled attribute------ */}
+
+                                    {/* <input disabled={disabled} className="btn  bg-black text-basic hover:bg-[#c97ca9] hover:text-white text-xl" type="submit" value="Login" /> */}
                                 </div>
                             </form>
                         </div>
