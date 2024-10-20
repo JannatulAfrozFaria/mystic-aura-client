@@ -10,38 +10,41 @@ import useAxiosPublic from "../../customHooks/useAxiosPublic";
 
 const SignUp = () => {
     const axiosPublic = useAxiosPublic();
-    const [showPassword,setShowPassword] = useState(false);
-    const { createUser , updateUserProfile } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const navigate = useNavigate();
     const onSubmit = data => {
         createUser(data.email, data.password)
-        .then(result=>{
-            const loggedUser = result.user;
-            console.log(loggedUser);
-            updateUserProfile(data.name, data.photoURL)
-            .then(()=>{
-                //create user entry to Database---------
-                const userInfo = {
-                    name: data.name,
-                    email: data.email
-                }
-                axiosPublic.post('/users', userInfo)
-                reset();
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "User Created successfully!",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-                  navigate('/');
-                  
-                }).catch((error)=>console.log(error));
-        })
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                updateUserProfile(data.name, data.photoURL)
+                    .then(() => {
+                        //create user entry to Database---------
+                        const userInfo = {
+                            name: data.name,
+                            email: data.email
+                        }
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    reset();
+                                    Swal.fire({
+                                        position: "top-end",
+                                        icon: "success",
+                                        title: "User Created successfully!",
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                    navigate('/');
+                                }
+                            })
+                    }).catch((error) => console.log(error));
+            })
     };
 
-    
+
     return (
         <div>
             <Helmet>
@@ -85,7 +88,7 @@ const SignUp = () => {
                                     <label className="label">
                                         <span className="label-text">Photo URL</span>
                                     </label>
-                                    <input type="text" {...register("photoURL", { required: true })}   placeholder="Photo URL" className="input input-bordered" />
+                                    <input type="text" {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered" />
                                     {errors.photoURL && <span className="text-dark2 font-md font-semibold" >Photo URL is required</span>}
                                 </div>
                                 {/* EMAIL------ */}
@@ -102,15 +105,15 @@ const SignUp = () => {
                                         <span className="label-text">Password</span>
                                     </label>
                                     <div className="relative">
-                                    <input type={showPassword? "text" : "password"} onClick={()=> setShowPassword(!showPassword)}
-                                     {...register("password", {
-                                        required: true,
-                                        minLength: 6,
-                                        maxLength: 20,
-                                        pattern: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{6,}$/
-                                    })}
-                                        name="password" placeholder="password" className="input input-bordered w-full" />
-                                        <span className="absolute top-4 right-4 " onClick={()=> setShowPassword(!showPassword)} > {showPassword ? <FaEyeSlash /> : <FaEye /> }  </span>
+                                        <input type={showPassword ? "text" : "password"} onClick={() => setShowPassword(!showPassword)}
+                                            {...register("password", {
+                                                required: true,
+                                                minLength: 6,
+                                                maxLength: 20,
+                                                pattern: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{6,}$/
+                                            })}
+                                            name="password" placeholder="password" className="input input-bordered w-full" />
+                                        <span className="absolute top-4 right-4 " onClick={() => setShowPassword(!showPassword)} > {showPassword ? <FaEyeSlash /> : <FaEye />}  </span>
                                     </div>
                                     {/* <input type={showPassword? "text" : "password"} onClick={()=> setShowPassword(!showPassword)}
                                      {...register("password", {
