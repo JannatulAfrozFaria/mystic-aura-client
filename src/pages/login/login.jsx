@@ -10,6 +10,8 @@ import Swal from 'sweetalert2';
 const Login = () => {
     // const captchaRef = useRef(null);
     const [disabled, setDisabled] = useState(true);
+    //state for password toggle
+    const [showPassword,setShowPassword] = useState(false);
     const { login } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
