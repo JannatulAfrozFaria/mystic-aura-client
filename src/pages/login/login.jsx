@@ -14,7 +14,7 @@ const Login = () => {
     const [disabled, setDisabled] = useState(true);
     //state for password toggle
     const [showPassword,setShowPassword] = useState(false);
-    const { login } = useContext(AuthContext);
+    const { login ,signInWithGoogle,signInWithGitHub } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/" ;
@@ -40,6 +40,26 @@ const Login = () => {
                   });
                   navigate(from,{replace:true});
             })
+    }
+    // GOOGLE------GITHUB----SIGN---IN
+    const handleGoogleSignIn =()=>{
+        signInWithGoogle()
+        .then(result=>{
+            console.log(result.user)
+        })
+        .catch(error=>{
+            console.error(error)
+        })
+    }
+
+    const handleGitHubSignIn = () =>{
+        signInWithGitHub()
+        .then(result=>{
+            console.log(result.user)
+        })
+        .catch(error=>{
+            console.error(error)
+        })
     }
     const handleValidateCaptcha = (e) => {
         // const user_captcha_value = captchaRef.current.value;
@@ -79,7 +99,7 @@ const Login = () => {
                             <div className="flex justify-between">
                                 <h1 className="text-2xl font-medium">Login</h1>
                                 <div className="flex gap-2 text-3xl">
-                                    <AiFillGoogleCircle />
+                                    <span onClick={handleGoogleSignIn}> <AiFillGoogleCircle /></span> 
                                     <FaGithub />
                                 </div>
                             </div>
