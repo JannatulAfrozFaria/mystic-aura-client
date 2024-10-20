@@ -6,8 +6,10 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import useAxiosPublic from "../../customHooks/useAxiosPublic";
 
 const SignUp = () => {
+    const axiosPublic = useAxiosPublic();
     const [showPassword,setShowPassword] = useState(false);
     const { createUser , updateUserProfile } = useContext(AuthContext);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -20,6 +22,11 @@ const SignUp = () => {
             updateUserProfile(data.name, data.photoURL)
             .then(()=>{
                 //create user entry to Database---------
+                const userInfo = {
+                    name: data.name,
+                    email: data.email
+                }
+                axiosPublic.post('/users', userInfo)
                 reset();
                 Swal.fire({
                     position: "top-end",
