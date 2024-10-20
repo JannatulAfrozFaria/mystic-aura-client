@@ -6,6 +6,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Swal from 'sweetalert2';
+import { FaEye } from "react-icons/fa";
 
 const Login = () => {
     // const captchaRef = useRef(null);
@@ -96,7 +97,7 @@ const Login = () => {
                                     </label>
                                     <input type={showPassword? "text" : "password"} 
                                     name="password" placeholder="password" className="input input-bordered" required />
-                                    <span onClick={()=> setShowPassword(!showPassword)} >Show</span>
+                                    <span onClick={()=> setShowPassword(!showPassword)} > <FaEye /> </span>
                                     {/* <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label> */}
