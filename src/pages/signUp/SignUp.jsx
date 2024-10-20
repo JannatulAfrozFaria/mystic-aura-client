@@ -29,6 +29,7 @@ const SignUp = () => {
                         axiosPublic.post('/users', userInfo)
                             .then(res => {
                                 if (res.data.insertedId) {
+                                    console.log('user added to the database')
                                     reset();
                                     Swal.fire({
                                         position: "top-end",
@@ -55,7 +56,7 @@ const SignUp = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full">
                         {/* TEXT SECTION */}
                         <div className=" text-center bg-black p-8 md:p-0 flex flex-col justify-center h-full flex-grow text-basic ">
-                            <h1 className="text-5xl font-bold  ">Login to <br /> </h1>
+                            <h1 className="text-5xl font-bold  ">Sign Up to <br /> </h1>
                             <h1 className=" text-5xl protest mt-4 text-[#c97ca9]">Mystic Aura!</h1>
                             <p className="py-6 ">Already have an account?</p>
                             <div className="form-control w-1/2 md:w-1/3 mx-auto ">

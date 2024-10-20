@@ -137,6 +137,7 @@ import { useContext, useState, useEffect, useRef } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2';
+import { FaCartShopping } from "react-icons/fa6";
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -145,13 +146,21 @@ const NavBar = () => {
 
     const navItems = <>
         <li className="menu-item">
-            <a href="/" className="navItem">Home</a>
+            <Link to="/" className="navItem">Home</Link>
         </li>
         <li className="menu-item">
-            <a href="/shop/floral" className="navItem">Shop</a>
+            <Link to="/shop/floral" className="navItem">Shop</Link>
         </li>
         <li className="menu-item">
-            <a href="/" className="navItem">Blog</a>
+            <Link to="/" className="navItem">Blog</Link>
+        </li>
+        <li className="menu-item">
+            <Link to="/" className="navItem">
+                <button className=" flex gap-2 items-center">
+                    <FaCartShopping />
+                    <div className="badge badge-secondary">+0</div>
+                </button>
+            </Link>
         </li>
     </>;
 
@@ -222,47 +231,47 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-end">
                     {user ? (
-                        <div className ="flex gap-2 text-basic items-center ">
+                        <div className="flex gap-2 text-basic items-center ">
                             <div> <p className="roboto font-semibold"> {user?.displayName} </p> </div>
                             <div className="relative" ref={dropdownRef}>
-                            <div
-                                className="flex items-center gap-2 cursor-pointer"
-                                onClick={toggleDropdown}
-                            >
-                                <img
-                                    className="w-10 h-10 rounded-full border-3 border-[#FBCFE8]"
-                                    src={user?.photoURL}
-                                    alt="profile-photo"
-                                />
-                                <span className="hidden md:block hover:visible hover:opacity-100 opacity-0 transition-opacity duration-200 text-white">
-                                    {user?.displayName}
-                                </span>
-                            </div>
-                            {dropdownOpen && (
-                                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
-                                    <ul className="py-2">
-                                        <li>
-                                            <Link
-                                                to="/profile"
-                                                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                                            >
-                                                Profile Details
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <button
-                                                onClick={handleLogOut}
-                                                className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200"
-                                            >
-                                                Log Out
-                                            </button>
-                                        </li>
-                                    </ul>
+                                <div
+                                    className="flex items-center gap-2 cursor-pointer"
+                                    onClick={toggleDropdown}
+                                >
+                                    <img
+                                        className="w-10 h-10 rounded-full border-3 border-[#FBCFE8]"
+                                        src={user?.photoURL}
+                                        alt="profile-photo"
+                                    />
+                                    <span className="hidden md:block hover:visible hover:opacity-100 opacity-0 transition-opacity duration-200 text-white">
+                                        {user?.displayName}
+                                    </span>
                                 </div>
-                            )}
+                                {dropdownOpen && (
+                                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
+                                        <ul className="py-2">
+                                            <li>
+                                                <Link
+                                                    to="/profile"
+                                                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                                                >
+                                                    Profile Details
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    onClick={handleLogOut}
+                                                    className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200"
+                                                >
+                                                    Log Out
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
                         </div>
-                        </div>
-                        
+
                     ) : (
                         <Link to={"/login"} className="btn btn-basic btn-sm">Login</Link>
                     )}

@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 const CategoryCard = ({item}) => {
     const {image,name, brandName,origin,price} = item;
+    const handleAddToCart = (perfume) =>{
+        console.log(perfume)
+    }
     return (
         <div>
             <div className="flex flex-col h-full">
@@ -15,8 +18,9 @@ const CategoryCard = ({item}) => {
                         <p><span>Brand:</span> {brandName} </p>
                         <p><span>Origin:</span> {origin} </p>
                         <p><span className=''>Price:</span>  <span className='categoryPrice text-xl tracking-wider font-light'> $ {price}</span></p>
-                        <button className=" py-3 categoryButton w-2/3 md:w-1/2 mx-auto mt-4 md:mt-2 text-xl font-light">
-                            <Link to={'/shop'}> Add to Cart </Link>
+                        <button onClick={()=>handleAddToCart(item)} className=" py-3 categoryButton w-2/3 md:w-1/2 mx-auto mt-4 md:mt-2 text-xl font-light">
+                            Add to Cart
+                            {/* <Link to={'/shop'}> Add to Cart </Link> */}
                         </button>
                     </div>
                 </div>
