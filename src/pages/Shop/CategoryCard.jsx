@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
+
+// import { Link } from "react-router-dom";
+import useAuth from "../../customHooks/useAuth";
 
 
 const CategoryCard = ({item}) => {
+    const {user} = useAuth();
     const {image,name, brandName,origin,price} = item;
     const handleAddToCart = (perfume) =>{
-        console.log(perfume)
+        console.log(perfume,user.email)
     }
     return (
         <div>
