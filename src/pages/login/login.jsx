@@ -100,7 +100,8 @@ const Login = () => {
                                 <h1 className="text-2xl font-medium">Login</h1>
                                 <div className="flex gap-2 text-3xl">
                                     <span onClick={handleGoogleSignIn}> <AiFillGoogleCircle /></span> 
-                                    <FaGithub />
+                                    <span onClick={handleGitHubSignIn}>  <FaGithub /></span> 
+                                   
                                 </div>
                             </div>
                             <form onSubmit={handleLogin} >
