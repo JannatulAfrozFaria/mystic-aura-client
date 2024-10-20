@@ -27,8 +27,8 @@ const SocialLogin = () => {
     return (
         <div>
             <div className="flex gap-2 text-3xl">
-                <span onClick={handleGoogleSignIn}> <AiFillGoogleCircle /></span>
-                <span onClick={handleGitHubSignIn}>  <FaGithub /></span>
+                <button onClick={handleGoogleSignIn}> <AiFillGoogleCircle /></button>
+                <button onClick={handleGitHubSignIn}>  <FaGithub /></button>
             </div>
         </div>
     );

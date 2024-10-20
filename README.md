@@ -31,7 +31,8 @@ Centralized platform for administrators to manage products, categories, and view
 
 ## npm package used for various purpose
 
-  - [React Helmet Async](https://www.npmjs.com/package/react-helmet-async)
+ - [React Hook Form](https://www.npmjs.com/package/react-hook-form)
+ - [React Helmet Async](https://www.npmjs.com/package/react-helmet-async)
  - [React Slick](https://www.npmjs.com/package/react-slick)
  - [React Tabs](https://www.npmjs.com/package/react-tabs)
  - [React Fast Marquee](https://www.npmjs.com/package/react-fast-marquee)
