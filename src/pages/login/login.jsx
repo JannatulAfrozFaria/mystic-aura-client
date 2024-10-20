@@ -59,7 +59,7 @@ const Login = () => {
             <Helmet>
                 <title>Mystic Aura | Login</title>
             </Helmet>
-            <div className="h-[75vh] md:my-24  flex items-center justify-center">
+            <div className="md:pb-24 md:pt-40 flex items-center justify-center">
                 <div className="w-3/4 mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full">
                         {/* TEXT SECTION */}
@@ -98,9 +98,9 @@ const Login = () => {
                                     </label>
                                     <div className="relative">
                                         <input type={showPassword? "text" : "password"} 
-                                        name="password" placeholder="password" className="input input-bordered" required />
+                                        name="password" placeholder="password" className="input input-bordered w-full" required />
                                         <span className="absolute top-4 right-4 " onClick={()=> setShowPassword(!showPassword)} > {showPassword ? <FaEyeSlash /> : <FaEye /> }  </span>
-                                        </div>
+                                    </div>
                                     {/* <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label> */}

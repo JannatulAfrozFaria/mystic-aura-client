@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
-
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {
+    const [showPassword,setShowPassword] = useState(false);
     const { createUser , updateUserProfile } = useContext(AuthContext);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const navigate = useNavigate();
@@ -38,7 +40,7 @@ const SignUp = () => {
             <Helmet>
                 <title>Mystic Aura | Sign Up</title>
             </Helmet>
-            <div className="h-[75vh] md:my-24  flex items-center justify-center">
+            <div className="md:pb-24 md:pt-36  flex items-center justify-center">
                 <div className="w-3/4 mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full">
                         {/* TEXT SECTION */}
@@ -92,14 +94,25 @@ const SignUp = () => {
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" {...register("password", {
+                                    <div className="relative">
+                                    <input type={showPassword? "text" : "password"} onClick={()=> setShowPassword(!showPassword)}
+                                     {...register("password", {
                                         required: true,
                                         minLength: 6,
                                         maxLength: 20,
                                         pattern: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{6,}$/
-                                        // pattern: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{6}$/
                                     })}
-                                        name="password" placeholder="password" className="input input-bordered" />
+                                        name="password" placeholder="password" className="input input-bordered w-full" />
+                                        <span className="absolute top-4 right-4 " onClick={()=> setShowPassword(!showPassword)} > {showPassword ? <FaEyeSlash /> : <FaEye /> }  </span>
+                                    </div>
+                                    {/* <input type={showPassword? "text" : "password"} onClick={()=> setShowPassword(!showPassword)}
+                                     {...register("password", {
+                                        required: true,
+                                        minLength: 6,
+                                        maxLength: 20,
+                                        pattern: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{6,}$/
+                                    })}
+                                        name="password" placeholder="password" className="input input-bordered" /> */}
                                     {errors.password?.type === 'required' && <span className="text-dark2 font-md font-semibold" >Password is required</span>}
                                     {errors.password?.type === 'minLength' && <span className="text-dark2 font-md font-semibold" >Password must be at least 6 characters</span>}
                                     {errors.password?.type === 'maxLength' && <span className="text-dark2 font-md font-semibold" >Password must be less than 20 character</span>}
