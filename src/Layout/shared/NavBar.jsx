@@ -138,9 +138,11 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2';
 import { FaCartShopping } from "react-icons/fa6";
+import useCart from "../../customHooks/useCart";
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const {cart} = useCart();
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null); // For detecting clicks outside the dropdown
 
@@ -158,7 +160,7 @@ const NavBar = () => {
             <Link to="/" className="navItem">
                 <button className=" flex gap-2 items-center">
                     <FaCartShopping />
-                    <div className="badge badge-secondary">+0</div>
+                    <div className="badge badge-secondary">+{cart.length}</div>
                 </button>
             </Link>
         </li>
