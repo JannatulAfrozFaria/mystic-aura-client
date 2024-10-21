@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import useAuth from "../../customHooks/useAuth";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAxiosSecure from "../../customHooks/useAxiosSecure";
+import useCart from "../../customHooks/useCart";
 
 
 const CategoryCard = ({ item }) => {
@@ -12,10 +13,10 @@ const CategoryCard = ({ item }) => {
     const { image, name, brandName, origin, price, _id } = item;
     const navigate = useNavigate();
     const location = useLocation();
-    const handleAddToCart = (perfume) => {
+    const { cart, refetch} = useCart();
+    const handleAddToCart = () => {
         if (user && user.email) {
-            //send 
-            console.log(perfume);
+            //send cart item to database
             const cartItem = {
                 itemId: _id,
                 email: user.email,
@@ -25,29 +26,16 @@ const CategoryCard = ({ item }) => {
                 .then(res => {
                     console.log(res.data)
                     if (res.data.insertedId) {
-                        let timerInterval;
                         Swal.fire({
-                            title: "Successful!",
-                            icon:"success",
-                            html: "Item will be added to your cart in <b></b> milliseconds!",
-                            timer: 2000,
-                            timerProgressBar: true,
-                            didOpen: () => {
-                                Swal.showLoading();
-                                const timer = Swal.getPopup().querySelector("b");
-                                timerInterval = setInterval(() => {
-                                    timer.textContent = `${Swal.getTimerLeft()}`;
-                                }, 100);
-                            },
-                            willClose: () => {
-                                clearInterval(timerInterval);
-                            }
-                        }).then((result) => {
-                            /* Read more about handling dismissals below */
-                            if (result.dismiss === Swal.DismissReason.timer) {
-                                console.log("I was closed by the timer");
-                            }
-                        });
+                            position: "bottom-end",
+                            icon: "success",
+                            // title: `${name} added to cart successfully!`,
+                            title: "Item added to cart successfully!",
+                            showConfirmButton: false,
+                            timer: 1500
+                          });
+                        //refetch the cart to update the cart items count
+                        refetch();
                     }
                 })
         }
@@ -86,7 +74,7 @@ const CategoryCard = ({ item }) => {
                         <p><span>Brand:</span> {brandName} </p>
                         <p><span>Origin:</span> {origin} </p>
                         <p><span className=''>Price:</span>  <span className='categoryPrice text-xl tracking-wider font-light'> $ {price}</span></p>
-                        <button onClick={() => handleAddToCart(item)} className=" py-3 categoryButton w-2/3 md:w-1/2 mx-auto mt-4 md:mt-2 text-xl font-light">
+                        <button onClick={handleAddToCart} className=" py-3 categoryButton w-2/3 md:w-1/2 mx-auto mt-4 md:mt-2 text-xl font-light">
                             Add to Cart
                             {/* <Link to={'/shop'}> Add to Cart </Link> */}
                         </button>
