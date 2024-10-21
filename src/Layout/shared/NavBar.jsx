@@ -157,7 +157,7 @@ const NavBar = () => {
             <Link to="/" className="navItem">Blog</Link>
         </li>
         <li className="menu-item">
-            <Link to="/" className="navItem">
+            <Link to="/dashboard/cart" className="navItem">
                 <button className=" flex gap-2 items-center">
                     <FaCartShopping />
                     <div className="badge badge-secondary">+{cart.length}</div>
