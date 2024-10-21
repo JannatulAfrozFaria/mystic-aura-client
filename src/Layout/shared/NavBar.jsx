@@ -154,7 +154,7 @@ const NavBar = () => {
             <Link to="/shop/floral" className="navItem">Shop</Link>
         </li>
         <li className="menu-item">
-            <Link to="/" className="navItem">Blog</Link>
+            <Link to="/blogs" className="navItem">Blogs</Link>
         </li>
         <li className="menu-item">
             <Link to="/dashboard/cart" className="navItem">

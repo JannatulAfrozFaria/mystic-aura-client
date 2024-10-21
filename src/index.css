@@ -157,6 +157,9 @@
 .basicBg{
   background-color: #FBCFE8;
 }
+.userDashboardBg{
+  background-color: #f9e0ee;
+}
 .categoryImageBorder{
   border: 8px solid #c97ca9;
   border-radius: 45% 45% 0% 0%;
@@ -208,5 +211,14 @@
   background-color: #c97ca9;
   color: #fff;
 }
+
+/* DASHBOARD-------- */
+.dashBrand{
+  color: #ba87a5;
+}
+.dashBrandSpan{
+  color: #d166a4;
+}
+
 
   
