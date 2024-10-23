@@ -8,12 +8,12 @@ import useCart from "../../customHooks/useCart";
 
 
 const CategoryCard = ({ item }) => {
-    const axiosSecure = useAxiosSecure();
     const { user } = useAuth();
     const { image, name, brandName, origin, price, _id } = item;
     const navigate = useNavigate();
     const location = useLocation();
     const { cart, refetch} = useCart();
+    const axiosSecure = useAxiosSecure();
     const handleAddToCart = () => {
         if (user && user.email) {
             //send cart item to database
