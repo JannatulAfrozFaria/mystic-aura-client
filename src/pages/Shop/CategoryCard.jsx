@@ -32,7 +32,7 @@ const CategoryCard = ({ item }) => {
                             // title: `${name} added to cart successfully!`, 
                             title: `${name} added to cart successfully!`,
                             showConfirmButton: false,
-                            timer: 1500
+                            timer: 2000
                           });
                         //refetch the cart to update the cart items count
                         refetch();
