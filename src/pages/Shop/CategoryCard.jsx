@@ -29,8 +29,8 @@ const CategoryCard = ({ item }) => {
                         Swal.fire({
                             position: "bottom-end",
                             icon: "success",
-                            // title: `${name} added to cart successfully!`,
-                            title: "Item added to cart successfully!",
+                            // title: `${name} added to cart successfully!`, 
+                            title: `${name} added to cart successfully!`,
                             showConfirmButton: false,
                             timer: 1500
                           });
