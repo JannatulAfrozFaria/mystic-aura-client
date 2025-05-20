@@ -142,7 +142,7 @@ import useCart from "../../customHooks/useCart";
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
-    const {cart} = useCart();
+    const [cart] = useCart();
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null); // For detecting clicks outside the dropdown
 

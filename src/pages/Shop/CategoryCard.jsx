@@ -12,7 +12,7 @@ const CategoryCard = ({ item }) => {
     const { image, name, brandName, origin, price, _id } = item;
     const navigate = useNavigate();
     const location = useLocation();
-    const { cart, refetch} = useCart();
+    const [cart, refetch] = useCart();
     const axiosSecure = useAxiosSecure();
     const handleAddToCart = () => {
         if (user && user.email) {
