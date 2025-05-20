@@ -34,7 +34,7 @@ const Cart = () => {
         //               refetch();
         //         }
         //       })
-        //     }
+        //     } 
         //   });
           .then((result)=>{
             if(result.isConfirmed){
@@ -63,7 +63,7 @@ const Cart = () => {
             <div className="flex justify-evenly">
                 <h2 className="text-xl md:text-5xl">Items: {cart.length} </h2>
                 <h2 className="text-xl md:text-5xl">Total Price: <span className="dashBrand">$ {totalPrice}</span> </h2>
-                <button className="btn payButton tracking-widest">Pay</button>
+                <button className="btn payButton tracking-widest w-full md:w-[200px] text-xl font-thin">Pay</button>
             </div>
             <div>
                 <div className="overflow-x-auto roboto my-8">
