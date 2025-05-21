@@ -231,7 +231,7 @@ const NavBar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end pr-4">
                     {user ? (
                         <div className="flex gap-2 text-basic items-center ">
                             <div> <p className="roboto font-semibold"> {user?.displayName} </p> </div>
@@ -245,9 +245,9 @@ const NavBar = () => {
                                         src={user?.photoURL}
                                         alt="profile-photo"
                                     />
-                                    <span className="hidden md:block hover:visible hover:opacity-100 opacity-0 transition-opacity duration-200 text-white">
+                                    {/* <span className="hidden md:block hover:visible hover:opacity-100 opacity-0 transition-opacity duration-200 text-white">
                                         {user?.displayName}
-                                    </span>
+                                    </span> */}
                                 </div>
                                 {dropdownOpen && (
                                     <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">

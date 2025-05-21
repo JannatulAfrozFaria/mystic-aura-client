@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import useAxiosPublic from "../../customHooks/useAxiosPublic";
+import SocialLogin from "../../Components/SocialLogin";
 
 const SignUp = () => {
     const axiosPublic = useAxiosPublic();
@@ -56,7 +57,7 @@ const SignUp = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full">
                         {/* TEXT SECTION */}
                         <div className=" text-center bg-black p-8 md:p-0 flex flex-col justify-center h-full flex-grow text-basic ">
-                            <h1 className="text-5xl font-bold  ">Sign Up to <br /> </h1>
+                            <h1 className="text-5xl font-bold  ">Login to <br /> </h1>
                             <h1 className=" text-5xl protest mt-4 text-[#c97ca9]">Mystic Aura!</h1>
                             <p className="py-6 ">Already have an account?</p>
                             <div className="form-control w-1/2 md:w-1/3 mx-auto ">
@@ -133,7 +134,12 @@ const SignUp = () => {
                                     <input className="btn  bg-black text-basic hover:bg-[#c97ca9] hover:text-white text-xl" type="submit" value="Sign Up" />
                                 </div>
                             </form>
+                            {/* SOCIAL---LOGIN */}
+                            <div className="w-1/8 mx-auto mt-4">
+                                <SocialLogin></SocialLogin>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>

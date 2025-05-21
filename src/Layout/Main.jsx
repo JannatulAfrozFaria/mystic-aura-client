@@ -11,7 +11,10 @@ const Main = () => {
         <div>
             <NavBar></NavBar>
             {/* { noHeaderFooter || <NavBar></NavBar>} */}
-            <Outlet></Outlet>
+            {/* <Outlet></Outlet> */}
+             <main className="flex-grow">
+                <Outlet />
+            </main>
             <Footer></Footer>
         </div>
     );

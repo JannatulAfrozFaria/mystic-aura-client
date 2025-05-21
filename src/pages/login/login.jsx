@@ -62,8 +62,8 @@ const Login = () => {
         <title>Mystic Aura | Login</title>
       </Helmet>
       <div className="md:pb-24 md:pt-40 flex items-center justify-center">
-        <div className="w-3/4 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full">
+        <div className="w-3/4 mx-auto mt-4 md:mt-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full ">
             {/* TEXT SECTION */}
             <div className=" text-center bg-black p-8 md:p-0 flex flex-col justify-center h-full flex-grow text-basic ">
               <h1 className="text-5xl font-bold  ">
