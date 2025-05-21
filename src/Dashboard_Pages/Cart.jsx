@@ -38,42 +38,39 @@ const Cart = () => {
     //         }
     //       })
     // }
-    const handleDelete = (id) => {
-    Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
-    })
-    .then((result) => {
-        if (result.isConfirmed) {
-            fetch(`http://localhost:5000/carts/${id}`, {
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then(data => {
-                if(data.deletedCount > 0) {
-                    Swal.fire({
-                        title: "Deleted!",
-                        text: 'Item has been deleted',
-                        icon: "success"
-                    });
-                    refetch();
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                Swal.fire({
-                    title: "Error!",
-                    text: "Failed to delete item",
-                    icon: "error"
-                });
+   const handleDelete = (id) => {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete it!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      axiosSecure.delete(`/carts/${id}`)
+        .then(res => {
+            console.log(res)
+          if (res.data.deletedCount > 0) {
+            refetch(); // Refresh cart data
+            Swal.fire({
+              title: "Deleted!",
+              text: "Item has been removed from your cart.",
+              icon: "success"
             });
-        }
-    });
+          }
+        })
+        .catch(error => {
+          console.error("Delete error:", error);
+          Swal.fire({
+            title: "Error!",
+            text: "Failed to delete item. Please try again.",
+            icon: "error"
+          });
+        });
+    }
+  });
 };
     
     return (
@@ -157,30 +154,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-
-// const handleDelete = id => {
-    //     Swal.fire({
-    //         title: "Are you sure?",
-    //         text: "You won't be able to revert this!",
-    //         icon: "warning",
-    //         showCancelButton: true,
-    //         confirmButtonColor: "#3085d6",
-    //         cancelButtonColor: "#d33",
-    //         confirmButtonText: "Yes, delete it!"
-    //     }).then((result) => {
-    //         if (result.isConfirmed) {
-    //             axiosSecure.delete(`/carts/${id}`)
-    //                 .then(res => {
-    //                     if (res.data.deletedCount > 0) {
-    //                         refetch();
-    //                         Swal.fire({
-    //                             title: "Deleted!",
-    //                             text: "Your file has been deleted.",
-    //                             icon: "success"
-    //                         });
-    //                     }
-    //                 })
-    //         }
-    //     });
-    // }
