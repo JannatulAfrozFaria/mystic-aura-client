@@ -219,6 +219,15 @@
 .dashBrandSpan{
   color: #d166a4;
 }
+.buttonOutline{
+  border: 2px solid #c97ca9;
+  border-radius: 15%;
+}
+.buttonOutline:hover{
+  background-color: #c97ca9;
+  color: white;
+  border: 2px solid transparent;
+}
 .payButton{
   background-color: #c97ca9;
   color: white;
