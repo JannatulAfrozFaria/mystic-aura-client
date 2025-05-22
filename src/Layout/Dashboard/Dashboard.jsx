@@ -1,5 +1,5 @@
 import { FaAd, FaHome, FaListAlt, FaShoppingBag, FaShoppingCart } from "react-icons/fa";
-import { FaBlog, FaCalendar, FaEnvelope, FaList, FaStreetView, FaWallet } from "react-icons/fa6";
+import { FaBlog, FaBook, FaCalendar, FaEnvelope, FaList, FaStreetView, FaUsers, FaWallet } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../../customHooks/useCart";
 import { TbPerfume } from "react-icons/tb";
@@ -32,11 +32,11 @@ const Dashboard = () => {
                               <NavLink to={'/dashboard/manageItems'}> <FaList/> Manage Items </NavLink>
                          </li>
                          <li>
-                              <NavLink to={'/dashboard/bookings'}> <HiOutlineClipboardDocumentList /> Manage Bookings </NavLink>
+                              <NavLink to={'/dashboard/bookings'}> <FaBook /> Manage Bookings </NavLink>
                          </li>
                          
                          <li>
-                              <NavLink to={'/dashboard/allUsers'}> <FaStreetView/> All Users </NavLink>
+                              <NavLink to={'/dashboard/users'}> <FaUsers/> All Users </NavLink>
                          </li>
                     </>
                     :<>
