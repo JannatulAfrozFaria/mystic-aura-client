@@ -1,22 +1,71 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../customHooks/useAxiosSecure";
 import { FaTrash, FaUsers } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const AllUsers = () => {
   const axiosSecure = useAxiosSecure();
-  const { data: users = [] } = useQuery({
+  const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
       const res = await axiosSecure.get("/users");
       return res.data;
     },
   });
-  const handleDeleteUser = (user) =>{
-
-  }
+  const handleMakeAdmin = (user) => {
+    axiosSecure.patch(`/users/admin/${user._id}`)
+    .then(res => {
+      console.log(res.data);
+      if (res.data.modifiedCount > 0) {
+        refetch();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: `${user.name} is an admin now!`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    });
+  };
+  const handleDeleteUser = (user) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure
+          .delete(`/users/${user._id}`)
+          .then((res) => {
+            console.log(res);
+            if (res.data.deletedCount > 0) {
+              refetch();
+              Swal.fire({
+                title: "Deleted!",
+                text: "Item has been removed from your cart.",
+                icon: "success",
+              });
+            }
+          })
+          .catch((error) => {
+            console.error("Delete error:", error);
+            Swal.fire({
+              title: "Error!",
+              text: "Failed to delete item. Please try again.",
+              icon: "error",
+            });
+          });
+      }
+    });
+  };
   return (
     <div>
-      <div className="flex justify-evenly my-4 text-3xl">
+      <div className="flex flex-col md:flex-row justify-center text-center md:justify-evenly my-4 text-xl md:text-3xl">
         <h2>All Users</h2>
         <h2>Total Users : {users.length} </h2>
       </div>
@@ -24,10 +73,10 @@ const AllUsers = () => {
         <table className="table table-zebra">
           {/* head */}
           <thead>
-            <tr className="text-xl font-thin">
-              <th></th>
+            <tr className="text-base md:text-xl font-thin">
+              <th className="hidden md:block"></th>
               <th>Name</th>
-              <th>Email</th>
+              <th className="hidden md:block">Email</th>
               <th>Role</th>
               <th>Action</th>
             </tr>
@@ -35,23 +84,28 @@ const AllUsers = () => {
           <tbody>
             {users.map((user, index) => (
               <tr key={user._id}>
-                <th>{index + 1}</th>
+                <th className="hidden md:block">{index + 1}</th>
                 <td>{user.name}</td>
-                <td>{user.email}</td>
+                <td className="hidden md:block">{user.email}</td>
                 <td>
-                    <button
-                    onClick={() => handleDeleteUser(user)}
-                    className=" p-2 rounded-md payButton  "
+                  {user.role === 'admin' ? 
+                  <>
+                  <h1 className="dashBrandSpan text-base md:text-xl">Admin</h1>
+                  </>
+                  :
+                  <button
+                    onClick={() => handleMakeAdmin(user)}
+                    className="p-1 md:p-2 rounded-md payButton  "
                   >
-                    <FaUsers className="text-2xl" />{" "}
-                  </button>
+                    <FaUsers className="text-md md:text-2xl" />{" "}
+                  </button>}
                 </td>
                 <td>
                   <button
                     onClick={() => handleDeleteUser(user)}
-                    className="  dashBrandSpan p-2 buttonOutline"
+                    className="  dashBrandSpan p-1 md:p-2 buttonOutline"
                   >
-                    <FaTrash className="text-2xl" />{" "}
+                    <FaTrash className="text-md md:text-2xl" />{" "}
                   </button>
                 </td>
               </tr>
