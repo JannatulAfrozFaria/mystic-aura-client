@@ -117,7 +117,13 @@ const Cart = () => {
                   </td> */}
                   <td>
                     <div className="flex items-center">
-                     
+                      {/* <div className="avatar">
+                                            <div className="mask mask-squircle h-12 w-12">
+                                                <img
+                                                    src={item.image}
+                                                    alt="perfume-icon" />
+                                            </div>
+                                        </div> */}
                       <div>
                         <div className="font-bold">{item.name}</div>
                         <div className="text-sm opacity-50">
