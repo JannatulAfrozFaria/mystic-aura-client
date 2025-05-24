@@ -108,7 +108,13 @@ const Cart = () => {
                   <th className="hidden md:block">
                     {index + 1}
                   </th>
-                 
+                  {/* <td className="hidden md:block">
+                    <div className="avatar">
+                      <div className="mask mask-squircle h-12 w-12">
+                        <img src={item.image} alt="perfume-icon" />
+                      </div>
+                    </div>
+                  </td> */}
                   <td>
                     <div className="flex items-center">
                       {/* <div className="avatar">
