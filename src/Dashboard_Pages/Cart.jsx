@@ -90,7 +90,7 @@ const Cart = () => {
       <div>
         <div className="overflow-x-auto roboto my-8">
           <table className="table w-full">
-           
+            {/* head */}
             <thead className="text-lg md:text-xl">
               <tr>
                 <th className="hidden md:block">#</th>
