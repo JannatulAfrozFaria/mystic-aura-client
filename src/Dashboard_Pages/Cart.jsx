@@ -92,14 +92,7 @@ const Cart = () => {
           <table className="table w-full">
             {/* head */}
             <thead className="text-lg md:text-xl">
-              <tr>
-                <th className="hidden md:block">#</th>
-                {/* <th className="hidden md:block">Image</th> */}
-                <th>Name</th>
-                <th>Price</th>
-                <th className="hidden md:block">Brand</th>
-                <th></th>
-              </tr>
+              
             </thead>
             <tbody>
               {/* row 1 */}
