@@ -93,8 +93,8 @@ const Cart = () => {
             {/* head */}
             <thead className="text-lg md:text-xl">
               <tr>
-                <th className="hidden md:block">#</th>
-                {/* <th className="hidden md:block">Image</th> */}
+                <th className="hidden md:block"> # </th>
+               
                 <th>Name</th>
                 <th>Price</th>
                 <th className="hidden md:block">Brand</th>
