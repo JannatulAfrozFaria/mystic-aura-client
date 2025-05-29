@@ -97,7 +97,7 @@ const Cart = () => {
                 {/* <th className="hidden md:block">Image</th> */}
                 <th>Name</th>
                 <th>Price</th>
-                <th className="hidden md:block">Brand</th>
+                
                 <th></th>
               </tr>
             </thead>
