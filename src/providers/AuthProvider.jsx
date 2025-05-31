@@ -43,7 +43,7 @@ const AuthProvider = ({children}) => {
        const unsubscribe  =  onAuthStateChanged(auth,currentUser=>{
             setUser(currentUser);
             if(currentUser){
-                
+                //get token and store client
                 const userInfo = {email: currentUser.email}
                 axiosPublic.post('/jwt', userInfo )
             }
