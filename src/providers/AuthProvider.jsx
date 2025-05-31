@@ -28,10 +28,7 @@ const AuthProvider = ({children}) => {
         setLoading(true);
         return signInWithPopup(auth,githubProvider);
     }
-    const logOut = () =>{
-        setLoading(true);
-        return signOut(auth)
-    }
+   
     
     const updateUserProfile = (name,photo) =>{
         return updateProfile(auth.currentUser,{
@@ -44,6 +41,8 @@ const AuthProvider = ({children}) => {
             setUser(currentUser);
             if(currentUser){
                 //get token and store client
+                const userInfo = {email: currentUser.email}
+                axiosPublic.post('/jwt', userInfo )
             }
             else{
                 //TODO: remove token if token stored in client side: local storage, caching, in memory
