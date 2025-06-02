@@ -50,7 +50,7 @@ const AuthProvider = ({children}) => {
             else{
                 //TODO: remove token if token stored in client side: local storage, caching, in memory
             }
-            
+            console.log('current-user', currentUser);
             setLoading(false);
         })
         return ()=>{
