@@ -20,7 +20,7 @@ axiosSecure.interceptors.response.use(function(response){
     return response;
 }, (error) =>{
     console.log('status error in the interceptor', error )
-    return Promise.reject(error);
+    
 }
 )
     return axiosSecure;
