@@ -20,7 +20,7 @@ const useAxiosSecure = () => {
 )
 //intercepts 401 and 403
 axiosSecure.interceptors.response.use(function(response){
-    
+    return response;
 }, async(error) =>{
     const status = error.response.status;
     console.log('status error in the interceptor', status )
