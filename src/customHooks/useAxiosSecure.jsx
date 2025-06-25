@@ -29,7 +29,7 @@ axiosSecure.interceptors.response.use(function(response){
         await logOut();
         navigate('/login')
     }
-    
+    return Promise.reject(error);
 }
 )
     return axiosSecure;
