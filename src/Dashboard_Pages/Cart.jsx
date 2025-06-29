@@ -70,7 +70,7 @@ const Cart = () => {
                 <th className="align-middle">Name</th>
                 <th className="align-middle">Price</th>
                 <th className="hidden md:table-cell align-middle">Brand</th>
-               
+                <th className="align-middle">Action</th>
               </tr>
             </thead>
             <tbody>
