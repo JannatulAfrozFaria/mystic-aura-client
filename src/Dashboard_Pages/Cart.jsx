@@ -76,7 +76,7 @@ const Cart = () => {
             <tbody>
               {cart.map((item, index) => (
                 <tr key={item._id}>
-                  <th className="hidden md:table-cell align-middle">{index + 1}</th>
+                  
                   <td className="hidden md:table-cell align-middle">
                     <div className="avatar flex justify-start">
                       <div className="mask mask-squircle w-12 h-12">
