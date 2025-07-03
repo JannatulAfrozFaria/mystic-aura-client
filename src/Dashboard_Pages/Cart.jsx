@@ -80,7 +80,7 @@ const Cart = () => {
                   <td className="hidden md:table-cell align-middle">
                     <div className="avatar flex justify-start">
                       <div className="mask mask-squircle w-12 h-12">
-                       
+                        <img src={item.image} alt={item.name} />
                       </div>
                     </div>
                   </td>
